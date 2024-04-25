@@ -1,3 +1,13 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(”ÝèÍ8ÕÅü›ñ1
+ž
+java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÜÓ²ø8ˆõ·µñ1
+ž
+java:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ê¥Ÿ£8‰õ·µñ1
+ž
+java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(°©§8‰õ·µñ1
+ž
+java:S1186F"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÊËÉÀ8Šõ·µñ1
+£
+java:S1186K"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(žÙ×ùÿÿÿÿ8Šõ·µñ1
+£
+java:S1186P"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(€€ö…ýÿÿÿÿ8‹õ·µñ1

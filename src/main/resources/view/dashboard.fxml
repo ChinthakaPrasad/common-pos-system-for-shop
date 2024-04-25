@@ -25,7 +25,7 @@
             <Image url="@../images/sales.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="378.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by Lumizec">
+      <Text fx:id="companyName" fill="WHITE" layoutX="378.0" layoutY="673.0" onMouseClicked="#companyNameOnaction" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by Lumizec">
          <font>
             <Font size="12.0" />
          </font>

@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ProductFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="833.0" prefWidth="1150.0" stylesheets="@styles/javafx.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductFormController">
+   <children>
+      <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" layoutX="-2.0" prefHeight="67.0" prefWidth="1157.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Bold" size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="productName" layoutX="41.0" layoutY="119.0" prefHeight="31.0" prefWidth="206.0" promptText="Product Name" />
+      <TextField fx:id="productRemarks" layoutX="684.0" layoutY="119.0" prefHeight="31.0" prefWidth="260.0" promptText="Remarks" />
+      <TextField fx:id="unitPrice" layoutX="272.0" layoutY="119.0" promptText="Unit Price" />
+      <TextField fx:id="unitType" layoutX="477.0" layoutY="119.0" promptText="Unit Type" />
+      <Button id="dark-blue" fx:id="addProductBtn" layoutX="962.0" layoutY="114.0" mnemonicParsing="false" onAction="#addProductBtnOnaction" prefHeight="41.0" prefWidth="177.0" stylesheets="@styles/javafx.css" text="Add Product" />
+      <TextField fx:id="searchProductField" layoutX="41.0" layoutY="196.0" onAction="#searchProductFieldOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Product" />
+      <Button id="dark-blue" fx:id="goBackBtn" layoutX="873.0" layoutY="754.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="260.0" styleClass="#dark-blue" stylesheets="@styles/javafx.css" text="Go Back" />
+      <Button id="dark-blue" fx:id="clearAllBtn" layoutX="41.0" layoutY="754.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="158.0" stylesheets="@styles/javafx.css" text="Clear All" />
+      <TableView layoutX="41.0" layoutY="263.0" prefHeight="470.0" prefWidth="1092.0">
+        <columns>
+          <TableColumn fx:id="tblProductId" prefWidth="122.0" text="Product ID" />
+          <TableColumn fx:id="tblProductName" prefWidth="246.0" text="Product Name" />
+            <TableColumn fx:id="tblUnitPrice" prefWidth="146.0" text="Unit Price" />
+            <TableColumn fx:id="tblUnitType" prefWidth="129.0" text="Unit Type" />
+            <TableColumn fx:id="tblRemarks" prefWidth="294.0" text="Remarks" />
+            <TableColumn fx:id="tblAction" prefWidth="154.0" text="Actions" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
