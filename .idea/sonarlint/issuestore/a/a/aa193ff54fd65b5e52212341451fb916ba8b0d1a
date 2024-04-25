@@ -1,0 +1,28 @@
+
+v
+java:S1104"TMake custName a static final constant or non-public and provide accessors if needed.(êßÁôøÿÿÿÿ8îëê›ñ1
+s
+java:S1104	"WMake costRemarks a static final constant or non-public and provide accessors if needed.(ÌšÄ=8Œ¯ë›ñ1
+}
+java:S1104
+"[Make CustPhoneNumber a static final constant or non-public and provide accessors if needed.(ƒÛø›ùÿÿÿÿ8´úë›ñ1
+{
+java:S1104"YMake custIndentity a static final constant or non-public and provide accessors if needed.(¡À®âøÿÿÿÿ8 ¶ì›ñ1
+|
+java:S1104"ZMake addCustomerBtn a static final constant or non-public and provide accessors if needed.(Ôƒµñÿÿÿÿÿ8ãïì›ñ1
+|
+java:S1104"_Make searchCustomerField a static final constant or non-public and provide accessors if needed.(·Ûä–8¥í›ñ1
+r
+java:S1104"UMake goBackBtn a static final constant or non-public and provide accessors if needed.(¼Ë¥ß8¿ûí›ñ1
+t
+java:S1104"WMake clearAllBtn a static final constant or non-public and provide accessors if needed.(µİì8«§î›ñ1
+{	java:S116
+"ZRename this field "CustPhoneNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÛø›ùÿÿÿÿ8¿úë›ñ1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¾Æ©³ÿÿÿÿÿ8­×î›ñ1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™¿8éşî›ñ1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŒëÖÏüÿÿÿÿ8ô¢ï›ñ1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æĞ§“8òÅï›ñ1

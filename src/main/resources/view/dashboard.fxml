@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="683.0" prefWidth="863.0" style="-fx-background-color: #85c1e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" layoutY="-6.0" prefHeight="67.0" prefWidth="864.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Bold" size="35.0" />
+         </font>
+      </Label>
+      <Button id="dark-blue" fx:id="customerBtn" layoutX="64.0" layoutY="143.0" mnemonicParsing="false" onAction="#cutomerBtnOnaction" prefHeight="56.0" prefWidth="178.0" stylesheets="@styles/javafx.css" text="Customers" />
+      <Button id="dark-blue" fx:id="supplierBtn" layoutX="64.0" layoutY="230.0" mnemonicParsing="false" onAction="#supplierBtnOnaction" prefHeight="56.0" prefWidth="178.0" stylesheets="@styles/javafx.css" text="Suppliers" />
+      <Button id="dark-blue" fx:id="placeOrderBtn" layoutX="64.0" layoutY="497.0" mnemonicParsing="false" onAction="#placeOrderBtnOnaction" prefHeight="128.0" prefWidth="178.0" stylesheets="@styles/javafx.css" text="Place Order" />
+      <Button id="dark-blue" fx:id="reportsBtn" layoutX="64.0" layoutY="396.0" mnemonicParsing="false" onAction="#reportBtnOnaction" prefHeight="56.0" prefWidth="178.0" stylesheets="@styles/javafx.css" text="Reports" />
+      <Button id="dark-blue" fx:id="productBtn" layoutX="64.0" layoutY="314.0" mnemonicParsing="false" onAction="#productBtnOnaction" prefHeight="56.0" prefWidth="178.0" stylesheets="@styles/javafx.css" text="Products" />
+      <ImageView fitHeight="488.0" fitWidth="478.0" layoutX="344.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sales.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="378.0" layoutY="673.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by Lumizec">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
