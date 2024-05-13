@@ -15,3 +15,13 @@ c
 3src/main/java/controller/ProductFormController.java,2\a\2ac253277ddbc41570a229e347a5dfbe6bc97dcb
 b
 2src/main/java/controller/ReportFormController.java,2\4\24a38e55a405c4e1d9b0478144b19ffab29fe88f
+R
+"src/main/java/db/dbConnection.java,7\d\7d3072e89a0f4cbd4678648bae12c1276267b1ec
+R
+"src/main/java/db/DbConnection.java,9\d\9d9e1dd63b7947850ebe38c34f0d22373e19dc2d
+R
+"src/main/java/entity/Customer.java,f\1\f14bad5e68bdfef4c489ba84a4d9c620bc6cb0f1
+Q
+!src/main/java/entity/Product.java,8\a\8ae77957877f4d5eed3d978e1da2d4e77255d908
+R
+"src/main/java/entity/Supplier.java,9\d\9d43d5c5f3b6dd1191e2c6e2f676fe2192e202e2

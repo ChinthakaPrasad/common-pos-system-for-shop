@@ -32,6 +32,6 @@
       </TableView>
       <Button id="dark-blue" fx:id="placeOrderBtn" layoutX="750.0" layoutY="664.0" mnemonicParsing="false" onAction="#placeOrderBtnOnaction" prefHeight="67.0" prefWidth="314.0" stylesheets="@styles/javafx.css" text="Place Order" />
       <Button id="dark-blue" fx:id="clearAllBtn" layoutX="23.0" layoutY="677.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="187.0" stylesheets="@styles/javafx.css" text="Clear All" />
-      <Button id="dark-blue" fx:id="goBackBtn" layoutX="238.0" layoutY="677.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="215.0" stylesheets="@styles/javafx.css" text="Go Back" />
+      <Button id="dark-blue" fx:id="goBackBtn" layoutX="20.0" layoutY="13.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="138.0" stylesheets="@styles/javafx.css" text="Go Back" />
    </children>
 </AnchorPane>

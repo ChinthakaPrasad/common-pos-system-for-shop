@@ -1,22 +1,33 @@
 
 t
-java:S1104"WMake customerBtn a static final constant or non-public and provide accessors if needed.(Û‘Ñ†8Ê­şšñ1
+java:S1104"WMake customerBtn a static final constant or non-public and provide accessors if needed.(Û‘Ñ†8ß¦ª™÷1
 t
-java:S1104"WMake supplierBtn a static final constant or non-public and provide accessors if needed.(¤›ÊÓ8Ë­şšñ1
+java:S1104"WMake supplierBtn a static final constant or non-public and provide accessors if needed.(¤›ÊÓ8à¦ª™÷1
 {
-java:S1104	"YMake placeOrderBtn a static final constant or non-public and provide accessors if needed.(¯±Ú³øÿÿÿÿ8Ë­şšñ1
+java:S1104"YMake placeOrderBtn a static final constant or non-public and provide accessors if needed.(¯±Ú³øÿÿÿÿ8à¦ª™÷1
 r
-java:S1104
-"VMake reportsBtn a static final constant or non-public and provide accessors if needed.(ÏéÄM8Ì­şšñ1
+java:S1104"VMake reportsBtn a static final constant or non-public and provide accessors if needed.(ÏéÄM8à¦ª™÷1
 x
-java:S1104"VMake productBtn a static final constant or non-public and provide accessors if needed.(ÁÆ£àøÿÿÿÿ8Ì­şšñ1
+java:S1104"VMake productBtn a static final constant or non-public and provide accessors if needed.(ÁÆ£àøÿÿÿÿ8à¦ª™÷1
+m
+java:S1104"PMake pane a static final constant or non-public and provide accessors if needed.(ç¢ıã8à¦ª™÷1
 £
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÖïòÕıÿÿÿÿ8±®şšñ1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ‘€ 8²®şšñ1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İ¾Í8²®şšñ1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(š·â8²®şšñ1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(°•ß8²®şšñ1
+java:S1186V"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8Îâ¾™÷1
+O
+java:S1172"2Remove this unused method parameter "actionEvent".(şõµÏ8ñ¦ª™÷1
+O
+java:S1172("2Remove this unused method parameter "actionEvent".(Šä¢•8ü¦ª™÷1
+T
+java:S11722"2Remove this unused method parameter "actionEvent".(Áò¶øÿÿÿÿ8ş¦ª™÷1
+T
+java:S1172<"2Remove this unused method parameter "actionEvent".(ØÌ³·ıÿÿÿÿ8ÿ¦ª™÷1
+O
+java:S1172F"2Remove this unused method parameter "actionEvent".(ë‰…ô8§ª™÷1
+S
+java:S1172P"1Remove this unused method parameter "mouseEvent".(Ãàû˜ÿÿÿÿÿ8‚§ª™÷1
+M
+java:S1128"0Remove this unused import 'javafx.scene.Parent'.(²ä¡È8ç¶­™÷1
+R
+java:S1128	"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8€ã¾™÷1
+V
+java:S1128"9Remove this unused import 'java.awt.image.ImageObserver'.(¥Óô”8ç¶­™÷1

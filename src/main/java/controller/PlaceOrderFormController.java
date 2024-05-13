@@ -1,11 +1,15 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class PlaceOrderFormController {
 
@@ -67,7 +71,13 @@ public class PlaceOrderFormController {
     }
 
     @FXML
-    void goBackBtnOnaction(ActionEvent event) {
+    void goBackBtnOnaction(ActionEvent event) throws IOException {
+        Stage stage = (Stage) goBackBtn.getScene().getWindow();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard.fxml")));
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setScene(scene);
+        stage.show();
 
     }
 
@@ -81,4 +91,27 @@ public class PlaceOrderFormController {
 
     }
 
+    public void placeOrderBtnOnaction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void clearAllBtnOnaction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void goBackBtnOnaction(javafx.event.ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) goBackBtn.getScene().getWindow();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard.fxml")));
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void addtocartBtnOnaction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void customerNameSugestOnaction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void productNameOnaction(javafx.event.ActionEvent actionEvent) {
+    }
 }

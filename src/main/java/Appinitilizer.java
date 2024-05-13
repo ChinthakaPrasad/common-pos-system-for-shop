@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,7 +15,12 @@ public class Appinitilizer extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/dashboard.fxml"))));
+        primaryStage.centerOnScreen();
+        primaryStage.setResizable(false);
         primaryStage.show();
+
+        Image image = new javafx.scene.image.Image("images/favicon.png");
+        primaryStage.getIcons().add(image);
 
     }
 }

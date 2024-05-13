@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="794.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+<AnchorPane fx:id="pane" prefHeight="794.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
    <children>
       <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" layoutY="-1.0" prefHeight="67.0" prefWidth="1090.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
          <font>
@@ -30,7 +30,8 @@
             <TableColumn prefWidth="157.0" text="Action" />
         </columns>
       </TableView>
-      <Button id="dark-blue" fx:id="goBackBtn" layoutX="846.0" layoutY="729.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="227.0" stylesheets="@styles/javafx.css" text="Go Back" />
-      <Button id="dark-blue" fx:id="clearAllBtn" layoutX="21.0" layoutY="729.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="40.0" prefWidth="127.0" stylesheets="@styles/javafx.css" text="Clear All" />
+      <Button id="dark-blue" fx:id="goBackBtn" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="127.0" stylesheets="@styles/javafx.css" text="Go Back" />
+      <Button id="dark-blue" fx:id="clearAllBtn" layoutX="21.0" layoutY="731.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="251.0" stylesheets="@styles/javafx.css" text="Clear All" />
+      <Button id="dark-blue" fx:id="refreshBtn" layoutX="824.0" layoutY="724.0" mnemonicParsing="false" onAction="#refreshBtnBtnOnaction" prefHeight="41.0" prefWidth="251.0" stylesheets="@styles/javafx.css" text="Refresh" />
    </children>
 </AnchorPane>

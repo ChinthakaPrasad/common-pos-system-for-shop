@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="683.0" prefWidth="863.0" style="-fx-background-color: #85c1e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+<AnchorPane fx:id="pane" prefHeight="683.0" prefWidth="863.0" style="-fx-background-color: #85c1e9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <children>
       <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" layoutY="-6.0" prefHeight="67.0" prefWidth="864.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
          <font>
