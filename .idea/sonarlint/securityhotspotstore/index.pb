@@ -25,3 +25,17 @@ Q
 !src/main/java/entity/Product.java,8\a\8ae77957877f4d5eed3d978e1da2d4e77255d908
 R
 "src/main/java/entity/Supplier.java,9\d\9d43d5c5f3b6dd1191e2c6e2f676fe2192e202e2
+O
+src/main/java/entity/Order.java,5\6\5663a0c567496d98ab82a4a4d80222cd7424f97b
+U
+%src/main/java/entity/OrderDetail.java,9\5\95539df9e9e1bc7fb0d7822ae09bdd972b17ec90
+R
+"src/main/java/dto/CustomerDto.java,6\d\6d52140f8b36d29a5a6973b0fa1a1f02a9fabaeb
+O
+src/main/java/dto/OrderDto.java,d\9\d99f6e4a8edc2b395bd1e1d43fbcd641e1fa81f5
+U
+%src/main/java/dto/OrderDetailDto.java,a\6\a6cd26c16df7a806921856285c150e241aa58567
+Q
+!src/main/java/dto/ProductDto.java,e\7\e7e7284126d95ef51ac76c6a53d0e970337831c6
+R
+"src/main/java/dto/SupplierDto.java,9\c\9ce34bd83f9a85d74507959184f9bc47d80cba30
