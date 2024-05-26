@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class SupplierFormController {
 
+    public Button refreshBtn;
+    public Button updateSupplierBtn;
     @FXML
     private TextField supplierName;
 
@@ -103,5 +105,8 @@ public class SupplierFormController {
     }
 
     public void refreshBtnOnaction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void updateSupplierBtnOnaction(javafx.event.ActionEvent actionEvent) {
     }
 }

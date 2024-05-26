@@ -1,5 +1,6 @@
 package controller;
 
+import dao.CustomerDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,6 +25,7 @@ public class CustomerFormController implements Initializable {
     public Button clearAllBtn;
     public AnchorPane pane;
     public Button refreshBtn;
+    public Button updateCustomerBtn;
 
     public void addCustomerBtnOnaction(ActionEvent actionEvent) {
     }
@@ -44,10 +46,14 @@ public class CustomerFormController implements Initializable {
     }
 
     public void refreshBtnBtnOnaction(ActionEvent actionEvent) {
+        CustomerDao.saveCustomer(null);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
+
+    public void updateCustomerBtnOnaction(ActionEvent actionEvent) {
     }
 }

@@ -27,8 +27,6 @@ R
 "src/main/java/entity/Supplier.java,9\d\9d43d5c5f3b6dd1191e2c6e2f676fe2192e202e2
 O
 src/main/java/entity/Order.java,5\6\5663a0c567496d98ab82a4a4d80222cd7424f97b
-U
-%src/main/java/entity/OrderDetail.java,9\5\95539df9e9e1bc7fb0d7822ae09bdd972b17ec90
 R
 "src/main/java/dto/CustomerDto.java,6\d\6d52140f8b36d29a5a6973b0fa1a1f02a9fabaeb
 O
@@ -39,3 +37,11 @@ Q
 !src/main/java/dto/ProductDto.java,e\7\e7e7284126d95ef51ac76c6a53d0e970337831c6
 R
 "src/main/java/dto/SupplierDto.java,9\c\9ce34bd83f9a85d74507959184f9bc47d80cba30
+Y
+)src/main/java/entity/OrderItemDetail.java,b\6\b6b2c0c0aa661f7ba9424e77a8859cbddcadb149
+R
+"src/main/java/dao/CustomerDao.java,4\d\4d73f8e21866a715c6674826f4163c18e5bd51c0
+T
+$src/main/java/dao/HibernateUtil.java,d\0\d0711a6d24600a65bb122b4ad04ec1ca3d192b9b
+X
+(src/main/java/entity/OrderDetailKey.java,2\2\2284f9e337aec00914b2b7be0d0a9e43d9825bfe

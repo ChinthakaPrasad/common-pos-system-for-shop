@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class ProductFormController {
 
+    public Button refreshBtn;
+    public Button updateProductBtn;
     @FXML
     private TextField productName;
 
@@ -97,5 +99,8 @@ public class ProductFormController {
     }
 
     public void clearAllBtnOnaction(javafx.event.ActionEvent actionEvent) {
+    }
+
+    public void updateProductBtnOnaction(javafx.event.ActionEvent actionEvent) {
     }
 }

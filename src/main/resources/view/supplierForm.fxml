@@ -19,7 +19,7 @@
       <TextField fx:id="supplierRemarks" layoutX="888.0" layoutY="109.0" prefHeight="31.0" prefWidth="206.0" promptText="Remarks" />
       <TextField fx:id="supplierPhoneNumber" layoutX="240.0" layoutY="109.0" promptText="Phone Number" />
       <TextField fx:id="supplierAddress" layoutX="444.0" layoutY="109.0" prefHeight="31.0" prefWidth="227.0" promptText="Address" />
-      <Button id="dark-blue" fx:id="addSupplierBtn" layoutX="907.0" layoutY="155.0" mnemonicParsing="false" onAction="#addSupplierBtnOnaction" prefHeight="67.0" prefWidth="187.0" stylesheets="@styles/javafx.css" text="Add Supplier" />
+      <Button id="dark-blue" fx:id="addSupplierBtn" layoutX="902.0" layoutY="181.0" mnemonicParsing="false" onAction="#addSupplierBtnOnaction" prefHeight="48.0" prefWidth="187.0" stylesheets="@styles/javafx.css" text="Add Supplier" />
       <TextField fx:id="searchSupplier" layoutX="14.0" layoutY="189.0" onAction="#searchSupplierOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Supplier" />
       <TableView layoutX="14.0" layoutY="244.0" prefHeight="474.0" prefWidth="1084.0">
          <columns>
@@ -35,5 +35,6 @@
       <Button id="dark-blue" fx:id="clearAllBtn" layoutX="31.0" layoutY="739.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="40.0" prefWidth="127.0" stylesheets="@styles/javafx.css" text="Clear All" />
       <TextField fx:id="supplierEmail" layoutX="685.0" layoutY="109.0" promptText="Email" />
       <Button id="dark-blue" fx:id="refreshBtn" layoutX="897.0" layoutY="739.0" mnemonicParsing="false" onAction="#refreshBtnOnaction" prefHeight="41.0" prefWidth="197.0" stylesheets="@styles/javafx.css" text="Refresh" />
+      <Button id="dark-blue" fx:id="updateSupplierBtn" layoutX="300.0" layoutY="184.0" mnemonicParsing="false" onAction="#updateSupplierBtnOnaction" prefHeight="41.0" prefWidth="187.0" stylesheets="@styles/javafx.css" text="Update Supplier" />
    </children>
 </AnchorPane>
