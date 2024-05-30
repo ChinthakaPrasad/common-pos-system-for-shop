@@ -1,25 +1,23 @@
 package entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
-@Data
+@Setter
+@Getter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Entity
 public class OrderItemDetail {
 
     @EmbeddedId
     OrderDetailKey id;
 
     @ManyToOne
-    @MapsId("customerId")
-    @JoinColumn(name = "customer_id")
-    Customer customer;
+    @MapsId("productId")
+    @JoinColumn(name = "product_id")
+    Product product;
 
     @ManyToOne
     @MapsId("orderId")

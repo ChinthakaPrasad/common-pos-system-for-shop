@@ -29,9 +29,12 @@ public class Order {
         this.customerName = customerName;
         this.date = date;
     }
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     @OneToMany(mappedBy = "order")
-    private List<OrderItemDetail> orderItemDetails;
+    private List<OrderItemDetail> orderItemDetails = new ArrayList<>();
 
 
 }

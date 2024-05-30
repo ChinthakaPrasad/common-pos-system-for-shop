@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -30,7 +31,6 @@ public class Customer {
       this.orders = orders;
    }
 
-   @OneToMany
-   @JoinColumn(name = "customerId")
-   private List<Order> orders;
+   @OneToMany(mappedBy = "customer")
+   private List<Order> orders = new ArrayList<>();
 }

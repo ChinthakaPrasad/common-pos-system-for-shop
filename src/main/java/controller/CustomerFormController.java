@@ -1,10 +1,13 @@
 package controller;
 
+import BO.CustomerBo;
 import dao.CustomerDao;
+import dto.CustomerDto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -16,9 +19,9 @@ import java.util.ResourceBundle;
 
 public class CustomerFormController implements Initializable {
     public TextField custName;
-    public TextField costRemarks;
-    public TextField CustPhoneNumber;
-    public TextField custIndentity;
+    public TextField custRemarks;
+    public TextField custPhoneNumber;
+    public TextField custIdentity;
     public Button addCustomerBtn;
     public TextField searchCustomerField;
     public Button goBackBtn;
@@ -27,7 +30,14 @@ public class CustomerFormController implements Initializable {
     public Button refreshBtn;
     public Button updateCustomerBtn;
 
+    public CustomerBo customerBo = new CustomerBo();
+
     public void addCustomerBtnOnaction(ActionEvent actionEvent) {
+        CustomerDto dto = new CustomerDto(custName.getText(), custPhoneNumber.getText(), custIdentity.getText(), custRemarks.getText());
+        boolean b = customerBo.save(dto);
+        if(b){
+            new Alert(Alert.AlertType.INFORMATION,"Customer Added!").show();
+        }
     }
 
     public void searchCustomerOnaction(ActionEvent actionEvent) {
@@ -46,7 +56,7 @@ public class CustomerFormController implements Initializable {
     }
 
     public void refreshBtnBtnOnaction(ActionEvent actionEvent) {
-        CustomerDao.saveCustomer(null);
+
     }
 
     @Override

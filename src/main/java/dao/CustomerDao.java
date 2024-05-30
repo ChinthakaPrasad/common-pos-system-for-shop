@@ -6,13 +6,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class CustomerDao {
-    public static boolean saveCustomer(Customer c){
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
+    public boolean saveCustomer(Customer c){
+        Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        session.save(new Customer( "chinthaka", "001","123","no",null));
+        session.save(c);
         transaction.commit();
+        session.close();
         return true;
+
     }
 
 }

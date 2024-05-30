@@ -45,3 +45,7 @@ T
 $src/main/java/dao/HibernateUtil.java,d\0\d0711a6d24600a65bb122b4ad04ec1ca3d192b9b
 X
 (src/main/java/entity/OrderDetailKey.java,2\2\2284f9e337aec00914b2b7be0d0a9e43d9825bfe
+P
+ src/main/java/BO/CustomerBo.java,7\b\7bf33a6e00209680978d14893ac239ceb29d9bb8
+M
+src/main/java/BO/SuperBo.java,3\0\30dfa20d692e3993b2e4ea48a774d2867f32ced8
