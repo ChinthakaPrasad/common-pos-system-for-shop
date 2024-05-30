@@ -1,5 +1,6 @@
-package dto;
+package dto.tm;
 
+import javafx.scene.control.Button;
 import lombok.*;
 
 @NoArgsConstructor
@@ -7,11 +8,12 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
-public class SupplierDto {
+public class SupplierTm {
     private int supplierId;
     private String supplierName;
     private String supplierPhone;
     private String supplierAddress;
     private String supplierEmail;
     private String remarks;
+    private Button btn;
 }

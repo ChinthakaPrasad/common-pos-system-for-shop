@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="807.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+<AnchorPane onMouseClicked="#onMouseClickAction" prefHeight="807.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
    <children>
       <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" prefHeight="67.0" prefWidth="1117.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
          <font>
@@ -21,7 +21,7 @@
       <TextField fx:id="supplierAddress" layoutX="444.0" layoutY="109.0" prefHeight="31.0" prefWidth="227.0" promptText="Address" />
       <Button id="dark-blue" fx:id="addSupplierBtn" layoutX="902.0" layoutY="181.0" mnemonicParsing="false" onAction="#addSupplierBtnOnaction" prefHeight="48.0" prefWidth="187.0" stylesheets="@styles/javafx.css" text="Add Supplier" />
       <TextField fx:id="searchSupplier" layoutX="14.0" layoutY="189.0" onAction="#searchSupplierOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Supplier" />
-      <TableView layoutX="14.0" layoutY="244.0" prefHeight="474.0" prefWidth="1084.0">
+      <TableView fx:id="tblSupplier" layoutX="14.0" layoutY="244.0" prefHeight="474.0" prefWidth="1084.0">
          <columns>
             <TableColumn fx:id="tblSupplierName" prefWidth="176.0" text="Supplier Name" />
             <TableColumn fx:id="tblPhoneNumber" prefWidth="174.0" text="Phone Number" />

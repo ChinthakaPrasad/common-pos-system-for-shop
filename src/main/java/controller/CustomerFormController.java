@@ -49,6 +49,8 @@ public class CustomerFormController implements Initializable {
         if(b){
             new Alert(Alert.AlertType.INFORMATION,"Customer Added!").show();
             loadCustomerTable();
+        }else{
+            new Alert(Alert.AlertType.ERROR,"Customer Added Unsuccesfull").show();
         }
     }
 
