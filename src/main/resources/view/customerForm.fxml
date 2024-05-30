@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="794.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+<AnchorPane fx:id="pane" onMouseClicked="#onMouseClickAction" prefHeight="794.0" prefWidth="1090.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
    <children>
       <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" layoutY="-1.0" prefHeight="67.0" prefWidth="1090.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
          <font>
@@ -21,13 +21,13 @@
       <TextField fx:id="custIdentity" layoutX="462.0" layoutY="99.0" promptText="NIC" />
       <Button id="dark-blue" fx:id="addCustomerBtn" layoutX="914.0" layoutY="94.0" mnemonicParsing="false" onAction="#addCustomerBtnOnaction" prefHeight="41.0" prefWidth="167.0" stylesheets="@styles/javafx.css" text="Add Customer" />
       <TextField fx:id="searchCustomerField" layoutX="21.0" layoutY="176.0" onAction="#searchCustomerOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Customer" />
-      <TableView layoutX="21.0" layoutY="234.0" prefHeight="474.0" prefWidth="1052.0">
+      <TableView fx:id="tblCustomer" layoutX="21.0" layoutY="234.0" prefHeight="474.0" prefWidth="1052.0">
         <columns>
-          <TableColumn prefWidth="211.0" text="Customer Name" />
-          <TableColumn prefWidth="247.0" text="Phone Number" />
-            <TableColumn prefWidth="205.0" text="NIC" />
-            <TableColumn prefWidth="231.0" text="Remarks" />
-            <TableColumn prefWidth="157.0" text="Action" />
+          <TableColumn fx:id="colCustame" prefWidth="211.0" text="Customer Name" />
+          <TableColumn fx:id="colCustNo" prefWidth="247.0" text="Phone Number" />
+            <TableColumn fx:id="colCustic" prefWidth="205.0" text="NIC" />
+            <TableColumn fx:id="colRemarks" prefWidth="231.0" text="Remarks" />
+            <TableColumn fx:id="colAction" prefWidth="157.0" text="Action" />
         </columns>
       </TableView>
       <Button id="dark-blue" fx:id="goBackBtn" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="127.0" stylesheets="@styles/javafx.css" text="Go Back" />

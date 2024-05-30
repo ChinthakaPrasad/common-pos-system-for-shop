@@ -1,6 +1,2 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(СнМ8ПбЮУь1
-H
-java:S2440"+Remove this instantiation of "CustomerDao".(¶‰АЉ8ЩбЮУь1
-R
-java:S2209"5Change this instance-reference to a static reference.(ё‹фҐ8ЭбЮУь1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(СнМ8—™ЫЦь1

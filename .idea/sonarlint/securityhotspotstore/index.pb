@@ -49,3 +49,5 @@ P
  src/main/java/BO/CustomerBo.java,7\b\7bf33a6e00209680978d14893ac239ceb29d9bb8
 M
 src/main/java/BO/SuperBo.java,3\0\30dfa20d692e3993b2e4ea48a774d2867f32ced8
+T
+$src/main/java/dto/tm/CustomerTm.java,2\a\2a0edce3160840b5e1dff3a221d2fba22c0b3f67

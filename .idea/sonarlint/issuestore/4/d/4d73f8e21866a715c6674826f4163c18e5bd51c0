@@ -1,5 +1,13 @@
 
+Q
+java:S3740-"/Provide the parametrized type for this generic.(÷îÿÿÿÿÿ8Œ²ÍÖü1
 N
-java:S1874",Remove this use of "save"; it is deprecated.(’à¸øÿÿÿÿ8ãÕÒÓü1
+java:S1874",Remove this use of "save"; it is deprecated.(’à¸øÿÿÿÿ8­²ÍÖü1
+N
+java:S1874",Remove this use of "save"; it is deprecated.(î¶ÿàûÿÿÿÿ8°²ÍÖü1
+K
+java:S1874%".Remove this use of "delete"; it is deprecated.(Ê¸´·8²²ÍÖü1
+U
+java:S1874-"3Remove this use of "createQuery"; it is deprecated.(÷îÿÿÿÿÿ8³²ÍÖü1
 [
-java:S1128"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬şÿÿÿÿ8ãÕÒÓü1
+java:S1128"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬şÿÿÿÿ8´²ÍÖü1
