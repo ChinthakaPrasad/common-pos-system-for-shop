@@ -57,3 +57,9 @@ R
 "src/main/java/dao/SupplierDao.java,3\1\31d12056189265d2896cf5c5ea3e29b954c8a6e9
 T
 $src/main/java/dto/tm/SupplierTm.java,e\5\e53f4b71a29d398a793ffa3ce83a4d22a672b144
+O
+src/main/java/BO/ProductBo.java,0\8\081e41cb4f02563fff7444f069d0e437d4aa9e4e
+S
+#src/main/java/dto/tm/ProductTm.java,a\c\ac113241a02943f9896574226b5e983ff52a023f
+Q
+!src/main/java/dao/ProductDao.java,9\2\9260df72bc229f0e18f5c9aa364685ccbc5f6081

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="833.0" prefWidth="1150.0" stylesheets="@styles/javafx.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductFormController">
+<AnchorPane onMouseClicked="#onMouseClickAction" prefHeight="833.0" prefWidth="1150.0" stylesheets="@styles/javafx.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductFormController">
    <children>
       <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" layoutX="-2.0" prefHeight="67.0" prefWidth="1157.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
          <font>
@@ -23,7 +23,7 @@
       <TextField fx:id="searchProductField" layoutX="41.0" layoutY="196.0" onAction="#searchProductFieldOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Product" />
       <Button id="dark-blue" fx:id="goBackBtn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="132.0" styleClass="#dark-blue" stylesheets="@styles/javafx.css" text="Go Back" />
       <Button id="dark-blue" fx:id="clearAllBtn" layoutX="25.0" layoutY="763.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Clear All" />
-      <TableView layoutX="41.0" layoutY="263.0" prefHeight="470.0" prefWidth="1092.0">
+      <TableView fx:id="tblProduct" layoutX="41.0" layoutY="263.0" prefHeight="470.0" prefWidth="1092.0">
         <columns>
           <TableColumn fx:id="tblProductId" prefWidth="122.0" text="Product ID" />
           <TableColumn fx:id="tblProductName" prefWidth="246.0" text="Product Name" />
