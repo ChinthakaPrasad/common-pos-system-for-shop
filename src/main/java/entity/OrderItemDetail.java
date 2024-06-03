@@ -25,5 +25,5 @@ public class OrderItemDetail {
     Order order;
 
     private double qty;
-    private double discount;
+    private double amount;
 }

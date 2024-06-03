@@ -25,12 +25,11 @@
       <Button id="dark-blue" fx:id="clearAllBtn" layoutX="25.0" layoutY="763.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Clear All" />
       <TableView fx:id="tblProduct" layoutX="41.0" layoutY="263.0" prefHeight="470.0" prefWidth="1092.0">
         <columns>
-          <TableColumn fx:id="tblProductId" prefWidth="122.0" text="Product ID" />
           <TableColumn fx:id="tblProductName" prefWidth="246.0" text="Product Name" />
             <TableColumn fx:id="tblUnitPrice" prefWidth="146.0" text="Unit Price" />
-            <TableColumn fx:id="tblUnitType" prefWidth="129.0" text="Unit Type" />
-            <TableColumn fx:id="tblRemarks" prefWidth="294.0" text="Remarks" />
-            <TableColumn fx:id="tblAction" prefWidth="154.0" text="Actions" />
+            <TableColumn fx:id="tblUnitType" prefWidth="237.0" text="Unit Type" />
+            <TableColumn fx:id="tblRemarks" prefWidth="318.0" text="Remarks" />
+            <TableColumn fx:id="tblAction" prefWidth="144.0" text="Actions" />
         </columns>
       </TableView>
       <Button id="dark-blue" fx:id="refreshBtn" layoutX="911.0" layoutY="755.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Refresh" />

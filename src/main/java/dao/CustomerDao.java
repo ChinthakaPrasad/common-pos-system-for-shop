@@ -48,4 +48,14 @@ public class CustomerDao {
         return list;
     }
 
+    public Customer getCustomer(String name){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        String hql = "FROM Customer WHERE customerName = :value";
+        Query query = session.createQuery(hql);
+        query.setParameter("value", name);
+
+        Customer result = (Customer) query.uniqueResult();
+        return result;
+    }
+
 }

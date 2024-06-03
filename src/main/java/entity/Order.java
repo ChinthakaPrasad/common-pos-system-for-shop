@@ -23,9 +23,9 @@ public class Order {
     private int orderId;
 
     private String customerName;
-    private Date date;
+    private String date;
 
-    public Order(String customerName, Date date) {
+    public Order(String customerName, String date) {
         this.customerName = customerName;
         this.date = date;
     }

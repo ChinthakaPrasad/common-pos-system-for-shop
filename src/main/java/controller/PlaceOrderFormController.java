@@ -1,6 +1,8 @@
 package controller;
 
 import BO.CustomerBo;
+import BO.OrderBo;
+import BO.OrderDetailBo;
 import BO.ProductBo;
 import dto.CustomerDto;
 import dto.OrderItemDetailDto;
@@ -26,6 +28,7 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -93,8 +96,36 @@ public class PlaceOrderFormController implements Initializable {
 
     }
 
+    private OrderBo orderBo = new OrderBo();
+    private OrderDetailBo orderDetailBo = new OrderDetailBo();
+
 
     public void placeOrderBtnOnaction(javafx.event.ActionEvent actionEvent) {
+        List<OrderItemDetailDto> orderItemDetailDtoList = new ArrayList<>();
+
+        for (OrderProductTm tm:tmList){
+            OrderItemDetailDto dto = new OrderItemDetailDto(
+                orderBo.getOrderId()+1,
+                tm.getProductId(),
+                tm.getAmount(),
+                tm.getQty()
+            );
+
+            orderItemDetailDtoList.add(dto);
+
+        }
+        OrderDto orderDto = new OrderDto(
+                orderBo.getOrderId(),
+                cmbCustomer.getValue().toString(),
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
+                orderItemDetailDtoList
+        );
+
+        if(orderBo.save(orderDto)){
+            new Alert(Alert.AlertType.INFORMATION,"Order Completed!").show();
+        }else{
+            new Alert(Alert.AlertType.ERROR,"Order Unsuccessfull").show();
+        }
 
         
 
@@ -138,7 +169,7 @@ public class PlaceOrderFormController implements Initializable {
                 newDto.getProductName(),
                 Double.parseDouble(productQty.getText()),
                 Double.parseDouble(productDiscount.getText()),
-                Double.parseDouble(productQty.getText())*Double.parseDouble(productDiscount.getText()),
+                Double.parseDouble(productQty.getText())*Double.parseDouble(unitPrice.getText())-Double.parseDouble(productDiscount.getText()),
                 productRemark.getText(),
                 btn
         );
@@ -155,7 +186,7 @@ public class PlaceOrderFormController implements Initializable {
             if(tm.getProductId() == item.getProductId()){
                 totalAmount += item.getAmount();
                 tm.setQty(tm.getQty()+ item.getQty());
-                tm.setAmount(tm.getAmount()+ item.getAmount()- item.getDiscount());
+                tm.setAmount(tm.getAmount()+ item.getAmount());
                 tm.setDiscount(tm.getDiscount()+ item.getDiscount());
                 tm.setRemarks(tm.getRemarks()+"/"+item.getRemarks());
                 isAdded = true;

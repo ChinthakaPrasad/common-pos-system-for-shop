@@ -76,7 +76,7 @@ public class ProductFormController implements Initializable {
         ProductDto dto = new ProductDto(0,
                 productName.getText(),
                 Double.parseDouble(unitPrice.getText()),
-                unitPrice.getText(),
+                unitType.getText(),
                 productRemarks.getText());
 
         if(productBo.save(dto)){

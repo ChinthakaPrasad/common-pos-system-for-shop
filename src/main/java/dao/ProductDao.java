@@ -47,4 +47,12 @@ public class ProductDao {
         session.close();
         return list;
     }
+
+    public Product getProduct(int id){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Product product = session.find(Product.class, id);
+        session.close();
+        return product;
+
+    }
 }
