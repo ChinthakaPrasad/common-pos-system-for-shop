@@ -23,3 +23,7 @@ J
 java:S1602¥",Remove useless curly braces around statement(ÄŞ€˜8«íºÿü1
 T
 java:S1172³"1Remove this unused method parameter "mouseEvent".(‹ÎÿÅÿÿÿÿÿ8ã½Íÿü1
+N
+java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8œµùı1
+T
+java:S1128"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8œµùı1

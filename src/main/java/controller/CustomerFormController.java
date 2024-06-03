@@ -136,6 +136,7 @@ public class CustomerFormController implements Initializable {
             tmList.add(c);
         }
         tblCustomer.setItems(tmList);
+
     }
 
     private void deleteCustomer(CustomerDto dto) {
