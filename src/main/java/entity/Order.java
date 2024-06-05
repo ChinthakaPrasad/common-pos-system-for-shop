@@ -33,7 +33,7 @@ public class Order {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItemDetail> orderItemDetails = new ArrayList<>();
 
 

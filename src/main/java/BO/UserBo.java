@@ -86,6 +86,6 @@ public class UserBo implements SuperBo<UserDto>{
                 }
             }
         }
-        return true;
+        return isValidUser;
     }
 }

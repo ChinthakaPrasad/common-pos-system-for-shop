@@ -11,6 +11,7 @@ import entity.Order;
 import entity.OrderDetailKey;
 import entity.OrderItemDetail;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderBo implements SuperBo<OrderDto>{
@@ -67,11 +68,46 @@ public class OrderBo implements SuperBo<OrderDto>{
 
     @Override
     public boolean delete(OrderDto dto) {
-        return false;
+        return orderDao.deleteOrder(dto.getOrderId());
+
     }
 
     @Override
     public List<OrderDto> all() {
-        return null;
+        List<Order> orderList = orderDao.getAllOrder();
+        List<OrderDto> orderDtoList = new ArrayList<>();
+
+
+        for(Order order: orderList){
+            List<OrderItemDetailDto> orderItemDetailDtos = new ArrayList<>();
+
+            for(OrderItemDetail orderItemDetail: order.getOrderItemDetails()){
+                orderItemDetailDtos.add(new OrderItemDetailDto(
+                        orderItemDetail.getId().getOrderId(),
+                        orderItemDetail.getId().getProductId(),
+                        orderItemDetail.getAmount(),
+                        orderItemDetail.getQty()
+                ));
+            }
+            orderDtoList.add(new OrderDto(
+                    order.getOrderId(),
+                    order.getCustomerName(),
+                    order.getTotalPrice(),
+                    order.getDate(),
+                    orderItemDetailDtos
+            ));
+        }
+
+        return orderDtoList;
+    }
+    public OrderDto getOrder(String id){
+        Order order = orderDao.getOrder(id);
+        return new OrderDto(
+                order.getOrderId(),
+                order.getCustomerName(),
+                order.getTotalPrice(),
+                order.getDate(),
+                null
+        );
     }
 }

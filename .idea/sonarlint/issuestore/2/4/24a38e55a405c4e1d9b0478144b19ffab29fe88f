@@ -1,15 +1,32 @@
 
+g	java:S112J"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÓØ¨Èş1
 K
-java:S3740	"/Provide the parametrized type for this generic.(ôôD8›ª¹ş1
+java:S3740"/Provide the parametrized type for this generic.(ôôD8ÔØ¨Èş1
 Q
-java:S3740
-"/Provide the parametrized type for this generic.(Í‘ú¨ûÿÿÿÿ8Ş·ª¹ş1
+java:S3740"/Provide the parametrized type for this generic.(Í‘ú¨ûÿÿÿÿ8ÔØ¨Èş1
+L
+java:S3740"/Provide the parametrized type for this generic.(Ü“âÂ8ÔØ¨Èş1
+Q
+java:S3740"/Provide the parametrized type for this generic.(üÅ‚™ùÿÿÿÿ8ÔØ¨Èş1
+K
+java:S3740"/Provide the parametrized type for this generic.(ï÷ãt8ÔØ¨Èş1
+Q
+java:S3740 "/Provide the parametrized type for this generic.(–¤³Òşÿÿÿÿ8ÔØ¨Èş1
 r
-java:S1104"UMake goBackBtn a static final constant or non-public and provide accessors if needed.(¼Ë¥ß8ÍŠ¨¹ş1
+java:S1104"UMake goBackBtn a static final constant or non-public and provide accessors if needed.(¼Ë¥ß8ÕØ¨Èş1
 r
-java:S1104	"VMake colOrderId a static final constant or non-public and provide accessors if needed.(ôôD8›ª¹ş1
+java:S1104"VMake colOrderId a static final constant or non-public and provide accessors if needed.(ôôD8ÕØ¨Èş1
 }
-java:S1104
-"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Í‘ú¨ûÿÿÿÿ8ß·ª¹ş1
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŒëÖÏüÿÿÿÿ8óê§¹ş1
+java:S1104"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Í‘ú¨ûÿÿÿÿ8ÕØ¨Èş1
+v
+java:S1104"YMake colTotalPrice a static final constant or non-public and provide accessors if needed.(Ü“âÂ8ÕØ¨Èş1
+|
+java:S1104"ZMake colBroughtDate a static final constant or non-public and provide accessors if needed.(üÅ‚™ùÿÿÿÿ8ÕØ¨Èş1
+q
+java:S1104"UMake colAction a static final constant or non-public and provide accessors if needed.(ï÷ãt8ÕØ¨Èş1
+w
+java:S1104 "UMake tblOrders a static final constant or non-public and provide accessors if needed.(–¤³Òşÿÿÿÿ8ÕØ¨Èş1
+T
+java:S1172$"2Remove this unused method parameter "actionEvent".(©ø«Áøÿÿÿÿ8üØ¨Èş1
+P
+java:S1128".Remove this unused import 'dto.tm.CustomerTm'.(Ä¶™ûÿÿÿÿ8’Ù¨Èş1

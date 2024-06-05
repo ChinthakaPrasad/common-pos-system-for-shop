@@ -33,6 +33,6 @@ public class Customer {
       this.orders = orders;
    }
 
-   @OneToMany(mappedBy = "customer")
+   @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, orphanRemoval = true)
    private List<Order> orders = new ArrayList<>();
 }

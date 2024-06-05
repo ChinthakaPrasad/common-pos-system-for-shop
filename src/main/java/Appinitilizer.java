@@ -22,6 +22,7 @@ public class Appinitilizer extends Application {
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("view/userLoginForm.fxml"))));
         primaryStage.centerOnScreen();
         primaryStage.setResizable(false);
+        primaryStage.setTitle("Login Form");
         primaryStage.show();
 
 

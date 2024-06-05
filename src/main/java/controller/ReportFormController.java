@@ -1,14 +1,94 @@
 package controller;
 
+import BO.OrderBo;
+import dto.OrderDto;
+import dto.tm.CustomerTm;
+import dto.tm.OrderTm;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-public class ReportFormController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+public class ReportFormController implements Initializable {
     public Button goBackBtn;
     public TableColumn colOrderId;
     public TableColumn colCustomerName;
+    public TableColumn colTotalPrice;
+    public TableColumn colBroughtDate;
+    public TableColumn colAction;
+    public TableView tblOrders;
 
-    public void goBackBtnOnaction(ActionEvent actionEvent) {
+    private OrderBo orderBo = new OrderBo();
+
+    public void goBackBtnOnaction(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) goBackBtn.getScene().getWindow();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/view/dashboard.fxml")));
+        stage.setResizable(false);
+        stage.centerOnScreen();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void loadOrderTable(){
+        List<OrderDto> orderDtoList = orderBo.all();
+        ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
+        Button btn = new Button("View");
+
+        for(OrderDto orderDto : orderDtoList){
+            OrderTm orderTm = new OrderTm(
+                    orderDto.getOrderId(),
+                    orderDto.getCustomerName(),
+                    orderDto.getTotalPrice(),
+                    orderDto.getDate(),
+                    btn,
+                    orderDto.getOrderItemDetails()
+            );
+
+            btn.setOnAction(actionEvent -> {
+                Stage newWindow = new Stage();
+                newWindow.setTitle("View Items");
+                newWindow.setResizable(false);
+                newWindow.centerOnScreen();
+
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/viewOrderItemForm.fxml"));
+                    Parent root = loader.load();
+                    newWindow.setScene(new Scene(root));
+                    ViewOrderItemFormController controller = loader.getController();
+                    controller.loadItemTable(orderTm);
+                    newWindow.show();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+            tmList.add(orderTm);
+
+        }
+        tblOrders.setItems(tmList);
+
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colOrderId.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
+        colTotalPrice.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
+        colBroughtDate.setCellValueFactory(new PropertyValueFactory<>("date"));
+        colAction.setCellValueFactory(new PropertyValueFactory<>("view"));
+        loadOrderTable();
     }
 }

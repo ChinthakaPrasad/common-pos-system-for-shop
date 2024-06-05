@@ -49,4 +49,8 @@ public class ProductBo implements SuperBo<ProductDto>{
         }
         return dtoList;
     }
+
+    public Product getProduct(int id){
+        return productDao.getProduct(id);
+    }
 }

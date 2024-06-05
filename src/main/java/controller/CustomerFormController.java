@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class CustomerFormController implements Initializable {
@@ -131,7 +132,13 @@ public class CustomerFormController implements Initializable {
             );
 
             btn.setOnAction(actionEvent -> {
-                deleteCustomer(dto);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Delete Confirmation");
+                alert.setContentText("Do you want to delete? Which may affect delete all orders of the customer too!");
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.isPresent() && result.get() == ButtonType.OK) {
+                    deleteCustomer(dto);
+                }
             });
 
             tmList.add(c);
