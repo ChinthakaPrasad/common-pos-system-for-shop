@@ -1,3 +1,15 @@
 
-d
-java:S2094"BRemove this empty class, write its code or make it an "interface".(µßÔ–ûÿÿÿÿ8Ó‚ÿ›ñ1
+K
+java:S3740	"/Provide the parametrized type for this generic.(ôôD8›ª¹ş1
+Q
+java:S3740
+"/Provide the parametrized type for this generic.(Í‘ú¨ûÿÿÿÿ8Ş·ª¹ş1
+r
+java:S1104"UMake goBackBtn a static final constant or non-public and provide accessors if needed.(¼Ë¥ß8ÍŠ¨¹ş1
+r
+java:S1104	"VMake colOrderId a static final constant or non-public and provide accessors if needed.(ôôD8›ª¹ş1
+}
+java:S1104
+"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Í‘ú¨ûÿÿÿÿ8ß·ª¹ş1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŒëÖÏüÿÿÿÿ8óê§¹ş1

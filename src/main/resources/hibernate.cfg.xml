@@ -17,12 +17,13 @@
 
         <!-- DB schema will be updated if needed -->
 
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
         <mapping class="entity.Customer"></mapping>
         <mapping class="entity.Order"></mapping>
         <mapping class="entity.OrderItemDetail"></mapping>
         <mapping class="entity.Product"></mapping>
         <mapping class="entity.Supplier"></mapping>
+        <mapping class="entity.User"></mapping>
     </session-factory>
 </hibernate-configuration>

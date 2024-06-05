@@ -1,0 +1,11 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Œ©İ¸ş1
+L
+java:S1066T"/Merge this if statement with the enclosing one.(Â¡¬´8©İ¸ş1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜ÑíÌ8©İ¸ş1
+H
+java:S1168."+Return an empty collection instead of null.(¥¹ï8›©İ¸ş1
+a
+java:S1854U"?Remove this useless assignment to local variable "isValidUser".(íÛ†úÿÿÿÿ8¶æİ¸ş1
+R
+java:S1481P"0Remove this unused "isValidUser" local variable.(üÑ•øÿÿÿÿ8Ÿ©İ¸ş1

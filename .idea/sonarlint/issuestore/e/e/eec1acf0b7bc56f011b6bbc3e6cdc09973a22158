@@ -1,14 +1,13 @@
 
 s
-java:S1104"WMake txtUsername a static final constant or non-public and provide accessors if needed.(áÉ«F8Û´Ãµş1
+java:S1104"WMake txtUsername a static final constant or non-public and provide accessors if needed.(áÉ«F8Àå¸ş1
 t
-java:S1104	"WMake txtPassword a static final constant or non-public and provide accessors if needed.(¨ğû8ÔÚÃµş1
+java:S1104"WMake txtPassword a static final constant or non-public and provide accessors if needed.(¨ğû8Áå¸ş1
 v
-java:S1104
-"TMake loginBtn a static final constant or non-public and provide accessors if needed.(Å ÷•øÿÿÿÿ8çÇÄµş1
+java:S1104"TMake loginBtn a static final constant or non-public and provide accessors if needed.(Å ÷•øÿÿÿÿ8Áå¸ş1
 w
-java:S1104"UMake signupBtn a static final constant or non-public and provide accessors if needed.(ìÈ€šşÿÿÿÿ8ªäÄµş1
-œ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œîR8´ùÃµş1
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚Ä¿Öıÿÿÿÿ8Ø—Äµş1
+java:S1104"UMake signupBtn a static final constant or non-public and provide accessors if needed.(ìÈ€šşÿÿÿÿ8Áå¸ş1
+T
+java:S1172"2Remove this unused method parameter "actionEvent".(Ó·§üÿÿÿÿ8Ìå¸ş1
+O
+java:S1172%"2Remove this unused method parameter "actionEvent".(¦ÕáÏ8Ùå¸ş1

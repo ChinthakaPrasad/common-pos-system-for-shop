@@ -43,6 +43,14 @@ P
 java:S1172‡"2Remove this unused method parameter "actionEvent".(ûÙúº8ÌœÃ¤ş1
 U
 java:S1172š"2Remove this unused method parameter "actionEvent".(¼ğÎÂşÿÿÿÿ8ÏœÃ¤ş1
+P
+java:S1128".Remove this unused import 'dto.tm.CustomerTm'.(Ä¶™ûÿÿÿÿ8Ã¤–¶ş1
+J
+java:S1128"-Remove this unused import 'dto.tm.ProductTm'.(×˜µ8Ã¤–¶ş1
+H
+java:S1128"+Remove this unused import 'entity.Product'.(Àìı8Ä¤–¶ş1
+H
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8Ä¤–¶ş1
 S
 java:S1068d"1Remove this unused "orderDetailBo" private field.(Óë„¤ÿÿÿÿÿ8ÚœÃ¤ş1
 J

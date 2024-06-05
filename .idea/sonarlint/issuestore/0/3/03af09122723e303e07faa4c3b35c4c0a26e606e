@@ -1,22 +1,22 @@
 
 s
-java:S1104"WMake txtUsername a static final constant or non-public and provide accessors if needed.(áÉ«F8œîØµş1
+java:S1104"WMake txtUsername a static final constant or non-public and provide accessors if needed.(áÉ«F8µ¾ß¶ş1
 t
-java:S1104	"WMake txtPassword a static final constant or non-public and provide accessors if needed.(¨ğû8“Ùµş1
+java:S1104"WMake txtPassword a static final constant or non-public and provide accessors if needed.(¨ğû8µ¾ß¶ş1
 v
-java:S1104
-"TMake loginBtn a static final constant or non-public and provide accessors if needed.(Å ÷•øÿÿÿÿ8êİÙµş1
+java:S1104"TMake loginBtn a static final constant or non-public and provide accessors if needed.(Å ÷•øÿÿÿÿ8µ¾ß¶ş1
 w
-java:S1104"UMake signupBtn a static final constant or non-public and provide accessors if needed.(ìÈ€šşÿÿÿÿ8Š—Úµş1
+java:S1104"UMake signupBtn a static final constant or non-public and provide accessors if needed.(ìÈ€šşÿÿÿÿ8µ¾ß¶ş1
 w
-java:S1104"ZMake txtPhoneNumber a static final constant or non-public and provide accessors if needed.(ùÈøŸ8¾¹Úµş1
+java:S1104"ZMake txtPhoneNumber a static final constant or non-public and provide accessors if needed.(ùÈøŸ8µ¾ß¶ş1
 v
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8…ÖÚµş1
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8µ¾ß¶ş1
 t
-java:S1104"RMake txtNic a static final constant or non-public and provide accessors if needed.(‚¿¤ûÿÿÿÿ8ë†Ûµş1
+java:S1104"RMake txtNic a static final constant or non-public and provide accessors if needed.(‚¿¤ûÿÿÿÿ8µ¾ß¶ş1
 y
-java:S1104"\Make txtPasswordAgain a static final constant or non-public and provide accessors if needed.(ÄÚ±â8Š£Ûµş1
-œ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œîR8Ü®Ùµş1
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚Ä¿Öıÿÿÿÿ8ÊüÙµş1
+java:S1104"\Make txtPasswordAgain a static final constant or non-public and provide accessors if needed.(ÄÚ±â8µ¾ß¶ş1
+N
+java:S1172"2Remove this unused method parameter "actionEvent".(½ù÷{8Ú¾ß¶ş1
+O
+java:S1172."2Remove this unused method parameter "actionEvent".(¦ÕáÏ8æ¾ß¶ş1
+G	java:S106:"+Replace this use of System.out by a logger.(™¡˜Š8é¾ß¶ş1

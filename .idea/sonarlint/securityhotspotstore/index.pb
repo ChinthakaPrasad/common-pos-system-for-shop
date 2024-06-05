@@ -79,3 +79,11 @@ e
 5src/main/java/controller/UserLoginFormController.java,e\e\eec1acf0b7bc56f011b6bbc3e6cdc09973a22158
 l
 <src/main/java/controller/UserRegistrationFormController.java,0\3\03af09122723e303e07faa4c3b35c4c0a26e606e
+N
+src/main/java/entity/User.java,b\a\ba7ac8670f3f87adc8663aab792e9f47d90839bc
+N
+src/main/java/dto/UserDto.java,1\5\15c81aa038b853c33b659e8125608969dae8b684
+L
+src/main/java/BO/UserBo.java,6\4\643ff1466ef58907483f3abca7555f02167707fc
+N
+src/main/java/dao/UserDao.java,0\7\07b569a91dddefed96c2d80d4dbb6faf84a19567
