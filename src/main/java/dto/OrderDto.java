@@ -12,8 +12,9 @@ import java.util.List;
 @Setter
 @ToString
 public class OrderDto {
-    private int orderId;
+    private String orderId;
     private String customerName;
+    private double totalPrice;
     private String date;
     private List<OrderItemDetailDto> orderItemDetails;
 }

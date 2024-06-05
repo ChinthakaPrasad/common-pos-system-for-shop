@@ -8,15 +8,15 @@ import org.hibernate.query.Query;
 import java.sql.PreparedStatement;
 
 public class OrderDao {
-    public int getLastOrderId(){
+    public String getLastOrderId(){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Query query = session.createQuery("SELECT MAX(id) FROM Order");
-        int lastId=-1;
+        String lastId=null;
         try {
-            lastId = (int) query.getSingleResult();
+            lastId =  (String) query.getSingleResult();
         }catch (NullPointerException e){
-            if(!(lastId >=0)){
-                return 0;
+            if(lastId == null){
+                return "Order 001";
             }
         }
         return lastId;

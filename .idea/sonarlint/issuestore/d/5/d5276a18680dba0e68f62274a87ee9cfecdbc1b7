@@ -1,6 +1,9 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜ÑíÌ8“ßşûı1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜ÑíÌ8¬øî¤ş1
+W
+java:S6397"5Replace this character class by the character itself.(÷œŒÇüÿÿÿÿ8¶øî¤ş1
+G	java:S106-"+Replace this use of System.out by a logger.(òê«ª8¹øî¤ş1
 H
-java:S1168A"+Return an empty collection instead of null.(¥¹ï8šßşûı1
+java:S1168K"+Return an empty collection instead of null.(¥¹ï8»øî¤ş1
 S
-java:S1068"1Remove this unused "orderDetailBo" private field.(Óë„¤ÿÿÿÿÿ8šßşûı1
+java:S1068"1Remove this unused "orderDetailBo" private field.(Óë„¤ÿÿÿÿÿ8»øî¤ş1

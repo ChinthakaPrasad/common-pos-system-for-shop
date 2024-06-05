@@ -42,6 +42,7 @@ public class CustomerFormController implements Initializable {
     public TableColumn colRemarks;
     public TableColumn colAction;
     public TableView tblCustomer;
+    public Button clearFieldBtn;
 
     public void addCustomerBtnOnaction(ActionEvent actionEvent) {
         CustomerDto dto = new CustomerDto(0,custName.getText(), custPhoneNumber.getText(), custIdentity.getText(), custRemarks.getText());
@@ -152,6 +153,10 @@ public class CustomerFormController implements Initializable {
     }
 
     public void onMouseClickAction(MouseEvent mouseEvent) {
+
+    }
+
+    public void clearFieldBtnOnaction(ActionEvent actionEvent) {
         clearFields();
     }
 }

@@ -34,5 +34,6 @@
       <Button id="dark-blue" fx:id="clearAllBtn" layoutX="21.0" layoutY="731.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="251.0" stylesheets="@styles/javafx.css" text="Clear All" />
       <Button id="dark-blue" fx:id="refreshBtn" layoutX="824.0" layoutY="724.0" mnemonicParsing="false" onAction="#refreshBtnBtnOnaction" prefHeight="41.0" prefWidth="251.0" stylesheets="@styles/javafx.css" text="Refresh" />
       <Button id="dark-blue" fx:id="updateCustomerBtn" layoutX="317.0" layoutY="171.0" mnemonicParsing="false" onAction="#updateCustomerBtnOnaction" prefHeight="41.0" prefWidth="217.0" stylesheets="@styles/javafx.css" text="Update Customer" />
+      <Button id="dark-blue" fx:id="clearFieldBtn" layoutX="556.0" layoutY="171.0" mnemonicParsing="false" onAction="#clearFieldBtnOnaction" prefHeight="41.0" prefWidth="148.0" stylesheets="@styles/javafx.css" text="Clear Fields" />
    </children>
 </AnchorPane>

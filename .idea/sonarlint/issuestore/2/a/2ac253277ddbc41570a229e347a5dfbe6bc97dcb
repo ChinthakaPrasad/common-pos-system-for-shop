@@ -7,23 +7,25 @@ y
 java:S1104"\Make updateProductBtn a static final constant or non-public and provide accessors if needed.(øŞ€â8Åó®ÿü1
 x
 java:S1104"VMake tblProduct a static final constant or non-public and provide accessors if needed.(¯©„úÿÿÿÿ8şĞ´ÿü1
+{
+java:S1104"YMake clearFieldBtn a static final constant or non-public and provide accessors if needed.(†ÁÍ¢ÿÿÿÿÿ8Í÷Ûş1
 £
-java:S1186Z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿àûÿÿÿÿ8Õó®ÿü1
+java:S1186["€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿àûÿÿÿÿ8Õó®ÿü1
 
-java:S1186f"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜¼ÙÊ8Öó®ÿü1
+java:S1186g"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜¼ÙÊ8Öó®ÿü1
+¤
+java:S1186´"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ÎÿÅÿÿÿÿÿ8ŞÇÜş1
 T
-java:S1172K"2Remove this unused method parameter "actionEvent".(ÑÜÂçüÿÿÿÿ8Ùó®ÿü1
+java:S1172L"2Remove this unused method parameter "actionEvent".(ÑÜÂçüÿÿÿÿ8Ùó®ÿü1
 O
-java:S1172]"2Remove this unused method parameter "actionEvent".(ûÙúº8Üó®ÿü1
+java:S1172^"2Remove this unused method parameter "actionEvent".(ûÙúº8Üó®ÿü1
 N
-java:S1172i"2Remove this unused method parameter "actionEvent".(ùÅ·-8çó®ÿü1
+java:S1172j"2Remove this unused method parameter "actionEvent".(ùÅ·-8çó®ÿü1
 J
-java:S1602‡",Remove useless curly braces around statement(ë¹¬8êó®ÿü1
+java:S1602ˆ",Remove useless curly braces around statement(ë¹¬8êó®ÿü1
 J
-java:S1602¥",Remove useless curly braces around statement(ÄŞ€˜8«íºÿü1
-T
-java:S1172³"1Remove this unused method parameter "mouseEvent".(‹ÎÿÅÿÿÿÿÿ8ã½Íÿü1
+java:S1602¦",Remove useless curly braces around statement(ÄŞ€˜8«íºÿü1
+U
+java:S1172À"2Remove this unused method parameter "actionEvent".(ˆ¹³íûÿÿÿÿ8ÎâÜş1
 N
 java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8œµùı1
-T
-java:S1128"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8œµùı1

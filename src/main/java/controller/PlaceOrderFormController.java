@@ -105,7 +105,7 @@ public class PlaceOrderFormController implements Initializable {
 
         for (OrderProductTm tm:tmList){
             OrderItemDetailDto dto = new OrderItemDetailDto(
-                orderBo.getOrderId()+1,
+                orderBo.getOrderId(),
                 tm.getProductId(),
                 tm.getAmount(),
                 tm.getQty()
@@ -117,6 +117,7 @@ public class PlaceOrderFormController implements Initializable {
         OrderDto orderDto = new OrderDto(
                 orderBo.getOrderId(),
                 cmbCustomer.getValue().toString(),
+                totalAmount,
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
                 orderItemDetailDtoList
         );
@@ -124,11 +125,8 @@ public class PlaceOrderFormController implements Initializable {
         if(orderBo.save(orderDto)){
             new Alert(Alert.AlertType.INFORMATION,"Order Completed!").show();
         }else{
-            new Alert(Alert.AlertType.ERROR,"Order Unsuccessfull").show();
+            new Alert(Alert.AlertType.ERROR,"Order Unsuccessful").show();
         }
-
-        
-
 }
 
     public void clearAllBtnOnaction(javafx.event.ActionEvent actionEvent) {
@@ -163,13 +161,19 @@ public class PlaceOrderFormController implements Initializable {
                 break;
             }
         }
+        double discount = 0;
+        if(Double.parseDouble(productDiscount.getText())>=0){
+            discount = Double.parseDouble(productDiscount.getText());
+        }
+
+
 
         OrderProductTm item = new OrderProductTm(
                 newDto.getProductId(),
                 newDto.getProductName(),
                 Double.parseDouble(productQty.getText()),
-                Double.parseDouble(productDiscount.getText()),
-                Double.parseDouble(productQty.getText())*Double.parseDouble(unitPrice.getText())-Double.parseDouble(productDiscount.getText()),
+                discount,
+                Double.parseDouble(productQty.getText())*Double.parseDouble(unitPrice.getText())-discount,
                 productRemark.getText(),
                 btn
         );

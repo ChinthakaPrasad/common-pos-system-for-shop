@@ -89,7 +89,7 @@ public class SupplierFormController implements Initializable {
             new Alert(Alert.AlertType.INFORMATION,"Supplier Added!").show();
             loadSupplierTable();
         }else{
-            new Alert(Alert.AlertType.ERROR,"Supplier Added Unsuccessfull").show();
+            new Alert(Alert.AlertType.ERROR,"Supplier Added Unsuccessful").show();
         }
     }
 
@@ -125,7 +125,7 @@ public class SupplierFormController implements Initializable {
         if(supplierBo.save(dto)){
             new Alert(Alert.AlertType.INFORMATION,"Supplier Updated!").show();
         }else{
-            new Alert(Alert.AlertType.ERROR,"Supplier Updated Unsuccessfull").show();
+            new Alert(Alert.AlertType.ERROR,"Supplier Updated Unsuccessful").show();
         }
     }
     private void loadSupplierTable() {

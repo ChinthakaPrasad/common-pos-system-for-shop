@@ -20,8 +20,14 @@ public class OrderBo implements SuperBo<OrderDto>{
     private OrderDetailBo orderDetailBo = new OrderDetailBo();
     private OrderDetailDao orderDetailDao = new OrderDetailDao();
 
-    public int getOrderId(){
-        return orderDao.getLastOrderId();
+    public String getOrderId(){
+        String lastOrderId =  orderDao.getLastOrderId();
+        if(lastOrderId != null){
+            int num = Integer.parseInt(lastOrderId.split("[ ]")[1]);
+            num++;
+            return "Order "+ String.format("%03d",num);
+        }
+       return "Order 001";
     }
 
     @Override
@@ -32,8 +38,12 @@ public class OrderBo implements SuperBo<OrderDto>{
         );
 
         Customer c = customerDao.getCustomer(dto.getCustomerName());
-
+        order.setOrderId(dto.getOrderId());
         order.setCustomer(c);
+        order.setTotalPrice(dto.getTotalPrice());
+
+        System.out.println(order.getOrderId());
+        boolean b = orderDao.saveOrder(order);
 
         for(OrderItemDetailDto detailDto: dto.getOrderItemDetails()){
             OrderItemDetail orderItemDetail = new OrderItemDetail(
@@ -46,7 +56,7 @@ public class OrderBo implements SuperBo<OrderDto>{
             orderDetailDao.saveOrderDetail(orderItemDetail);
         }
 
-        return orderDao.saveOrder(order);
+        return b;
 
     }
 

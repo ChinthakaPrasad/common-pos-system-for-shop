@@ -7,6 +7,7 @@ import dto.tm.CustomerTm;
 import dto.tm.ProductTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,7 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -27,6 +27,7 @@ public class ProductFormController implements Initializable {
     public Button refreshBtn;
     public Button updateProductBtn;
     public TableView tblProduct;
+    public Button clearFieldBtn;
     @FXML
     private TextField productName;
 
@@ -83,7 +84,7 @@ public class ProductFormController implements Initializable {
             new Alert(Alert.AlertType.INFORMATION,"Product Added!").show();
             loadCustomerTable();
         }else{
-            new Alert(Alert.AlertType.ERROR,"Product Added Unsuccessfull").show();
+            new Alert(Alert.AlertType.ERROR,"Product Added Unsuccessful").show();
         }
     }
 
@@ -113,7 +114,7 @@ public class ProductFormController implements Initializable {
             new Alert(Alert.AlertType.INFORMATION,"Product Updated!").show();
             loadCustomerTable();
         }else{
-            new Alert(Alert.AlertType.ERROR,"Product Updated Unsuccessfull").show();
+            new Alert(Alert.AlertType.ERROR,"Product Updated Unsuccessful").show();
         }
     }
 
@@ -177,7 +178,7 @@ public class ProductFormController implements Initializable {
     }
 
     public void onMouseClickAction(MouseEvent mouseEvent) {
-        clearFields();
+
     }
 
     private void clearFields() {
@@ -186,5 +187,9 @@ public class ProductFormController implements Initializable {
         unitPrice.clear();
         unitType.clear();
         productRemarks.clear();
+    }
+
+    public void clearFieldBtnOnaction(ActionEvent actionEvent) {
+        clearFields();
     }
 }

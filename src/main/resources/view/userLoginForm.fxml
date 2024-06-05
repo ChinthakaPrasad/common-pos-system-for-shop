@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="458.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserLoginFormController">
+   <children>
+      <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" prefHeight="67.0" prefWidth="636.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Bold" size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="161.0" layoutY="141.0" prefHeight="31.0" prefWidth="316.0" promptText="User Name" />
+      <TextField fx:id="txtPassword" layoutX="161.0" layoutY="198.0" prefHeight="31.0" prefWidth="316.0" promptText="Password" />
+      <Label layoutX="231.0" layoutY="380.0" text="Not a registered member?" />
+      <Button fx:id="loginBtn" layoutX="232.0" layoutY="246.0" mnemonicParsing="false" onAction="#loginBtnOnaction" prefHeight="21.0" prefWidth="175.0" text="Log In" />
+      <Button fx:id="signupBtn" layoutX="231.0" layoutY="413.0" mnemonicParsing="false" onAction="#signupBtnOnaction" prefHeight="21.0" prefWidth="175.0" text="Sign Up" />
+   </children>
+</AnchorPane>

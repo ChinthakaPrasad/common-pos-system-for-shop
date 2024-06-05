@@ -34,5 +34,6 @@
       </TableView>
       <Button id="dark-blue" fx:id="refreshBtn" layoutX="911.0" layoutY="755.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Refresh" />
       <Button id="dark-blue" fx:id="updateProductBtn" layoutX="337.0" layoutY="191.0" mnemonicParsing="false" onAction="#updateProductBtnOnaction" prefHeight="41.0" prefWidth="214.0" stylesheets="@styles/javafx.css" text="Update Product" />
+      <Button id="dark-blue" fx:id="clearFieldBtn" layoutX="577.0" layoutY="191.0" mnemonicParsing="false" onAction="#clearFieldBtnOnaction" prefHeight="41.0" prefWidth="149.0" stylesheets="@styles/javafx.css" text="Clear Fields" />
    </children>
 </AnchorPane>

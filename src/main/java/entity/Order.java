@@ -19,10 +19,10 @@ import java.util.List;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int orderId;
+    private String orderId;
 
     private String customerName;
+    private double totalPrice;
     private String date;
 
     public Order(String customerName, String date) {
