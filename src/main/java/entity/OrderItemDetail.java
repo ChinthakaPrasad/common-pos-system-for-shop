@@ -24,6 +24,7 @@ public class OrderItemDetail {
     @JoinColumn(name = "order_id")
     Order order;
 
+    private String supplierName;
     private double qty;
     private double amount;
 }

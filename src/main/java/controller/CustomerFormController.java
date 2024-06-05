@@ -46,14 +46,26 @@ public class CustomerFormController implements Initializable {
     public Button clearFieldBtn;
 
     public void addCustomerBtnOnaction(ActionEvent actionEvent) {
-        CustomerDto dto = new CustomerDto(0,custName.getText(), custPhoneNumber.getText(), custIdentity.getText(), custRemarks.getText());
-        boolean b = customerBo.save(dto);
-        if(b){
-            new Alert(Alert.AlertType.INFORMATION,"Customer Added!").show();
-            loadCustomerTable();
-        }else{
-            new Alert(Alert.AlertType.ERROR,"Customer Added Unsuccesfull").show();
+        boolean isExist = false;
+        for(CustomerTm c:tmList){
+            if(c.getCustomerName().equalsIgnoreCase(custName.getText().toLowerCase())){
+                isExist = true;
+            }
         }
+
+        if(!isExist && !custName.getText().isEmpty()){
+            CustomerDto dto = new CustomerDto(0,custName.getText(), custPhoneNumber.getText(), custIdentity.getText(), custRemarks.getText());
+            boolean b = customerBo.save(dto);
+            if(b){
+                new Alert(Alert.AlertType.INFORMATION,"Customer Added!").show();
+                loadCustomerTable();
+            }else{
+                new Alert(Alert.AlertType.ERROR,"Customer Added Unsuccesfull").show();
+            }
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Customer Name already Exist").show();
+        }
+
     }
 
     public void searchCustomerOnaction(ActionEvent actionEvent) {
@@ -113,6 +125,9 @@ public class CustomerFormController implements Initializable {
         boolean b = customerBo.update(dto);
         if(b){
             new Alert(Alert.AlertType.INFORMATION,"Update Successful").show();
+            loadCustomerTable();
+        }else{
+            new Alert(Alert.AlertType.ERROR,"Update Not Successful").show();
         }
     }
     private void setData(CustomerTm newValue) {

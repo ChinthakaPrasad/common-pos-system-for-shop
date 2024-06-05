@@ -8,6 +8,7 @@ import dto.tm.ProductTm;
 import dto.tm.SupplierTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,7 +18,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -28,6 +28,7 @@ public class SupplierFormController implements Initializable {
     public Button refreshBtn;
     public Button updateSupplierBtn;
     public TableView tblSupplier;
+    public Button clearFieldBtn;
     @FXML
     private TextField supplierName;
 
@@ -78,20 +79,30 @@ public class SupplierFormController implements Initializable {
 
 
     public void addSupplierBtnOnaction(javafx.event.ActionEvent actionEvent) {
-        SupplierDto dto = new SupplierDto(
-                0,
-                supplierName.getText(),
-                supplierPhoneNumber.getText(),
-                supplierAddress.getText(),
-                supplierEmail.getText(),
-                supplierRemarks.getText());
-
-        if(supplierBo.save(dto)){
-            new Alert(Alert.AlertType.INFORMATION,"Supplier Added!").show();
-            loadSupplierTable();
-        }else{
-            new Alert(Alert.AlertType.ERROR,"Supplier Added Unsuccessful").show();
+        boolean isExist = false;
+        for(SupplierTm supplierTm:tmList){
+            if(supplierTm.getSupplierName().equalsIgnoreCase(supplierName.getText().toLowerCase())){
+                isExist = true;
+            }
         }
+
+        if(!isExist && !supplierName.getText().isEmpty()){
+            SupplierDto dto = new SupplierDto(
+                    0,
+                    supplierName.getText(),
+                    supplierPhoneNumber.getText(),
+                    supplierAddress.getText(),
+                    supplierEmail.getText(),
+                    supplierRemarks.getText());
+
+            if(supplierBo.save(dto)){
+                new Alert(Alert.AlertType.INFORMATION,"Supplier Added!").show();
+                loadSupplierTable();
+            }else{
+                new Alert(Alert.AlertType.ERROR,"Supplier Added Unsuccessful").show();
+            }
+        }
+
     }
 
     public void searchSupplierOnaction(javafx.event.ActionEvent actionEvent) {
@@ -130,8 +141,9 @@ public class SupplierFormController implements Initializable {
                 supplierEmail.getText(),
                 supplierRemarks.getText());
 
-        if(supplierBo.save(dto)){
+        if(supplierBo.update(dto)){
             new Alert(Alert.AlertType.INFORMATION,"Supplier Updated!").show();
+            loadSupplierTable();
         }else{
             new Alert(Alert.AlertType.ERROR,"Supplier Updated Unsuccessful").show();
         }
@@ -211,5 +223,13 @@ public class SupplierFormController implements Initializable {
 
     public void onMouseClickAction(MouseEvent mouseEvent) {
 
+    }
+
+    public void clearFieldBtnOnaction(ActionEvent actionEvent) {
+        supplierName.clear();
+        supplierRemarks.clear();
+        supplierEmail.clear();
+        supplierAddress.clear();
+        supplierPhoneNumber.clear();
     }
 }

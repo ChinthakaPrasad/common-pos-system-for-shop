@@ -51,6 +51,7 @@ public class OrderBo implements SuperBo<OrderDto>{
                     new OrderDetailKey(dto.getOrderId(), detailDto.getProductId()),
                     productDao.getProduct(detailDto.getProductId()),
                     order,
+                    detailDto.getSupplierName(),
                     detailDto.getQty(),
                     detailDto.getAmount()
                     );
@@ -86,7 +87,8 @@ public class OrderBo implements SuperBo<OrderDto>{
                         orderItemDetail.getId().getOrderId(),
                         orderItemDetail.getId().getProductId(),
                         orderItemDetail.getAmount(),
-                        orderItemDetail.getQty()
+                        orderItemDetail.getQty(),
+                        orderItemDetail.getSupplierName()
                 ));
             }
             orderDtoList.add(new OrderDto(

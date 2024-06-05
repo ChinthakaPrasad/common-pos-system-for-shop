@@ -22,11 +22,14 @@ public class SupplierBo implements SuperBo<SupplierDto>{
 
     @Override
     public boolean update(SupplierDto dto) {
-        return supplierDao.updateSupplier(new Supplier(dto.getSupplierName(),
+        Supplier oldSupplier = supplierDao.getSupplier(dto.getSupplierName());
+        Supplier newSupplier = new Supplier(dto.getSupplierName(),
                 dto.getSupplierPhone(),
                 dto.getSupplierAddress(),
                 dto.getSupplierEmail(),
-                dto.getRemarks()));
+                dto.getRemarks());
+
+        return supplierDao.updateSupplier(newSupplier, oldSupplier.getSupplierId());
     }
 
     @Override

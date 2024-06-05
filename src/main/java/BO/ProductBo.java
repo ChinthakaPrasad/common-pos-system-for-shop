@@ -13,7 +13,9 @@ public class ProductBo implements SuperBo<ProductDto>{
     @Override
     public boolean save(ProductDto dto) {
         return productDao.saveProduct(new Product(dto.getProductName(),
-                dto.getUnitPrice(),
+                dto.getSellingUnitPrice(),
+                dto.getBuyingUnitPrice(),
+                dto.getSupplier(),
                 dto.getUnitType(),
                 dto.getRemarks()));
 
@@ -21,12 +23,17 @@ public class ProductBo implements SuperBo<ProductDto>{
 
     @Override
     public boolean update(ProductDto dto) {
-
-        return productDao.updateProduct(new Product(dto.getProductName(),
-                dto.getUnitPrice(),
+        Product oldProduct = productDao.getProduct(dto.getProductName());
+        Product newProduct = new Product(dto.getProductName(),
+                dto.getSellingUnitPrice(),
+                dto.getBuyingUnitPrice(),
+                dto.getSupplier(),
                 dto.getUnitType(),
-                dto.getRemarks()));
+                dto.getRemarks());
+
+        return productDao.updateProduct(newProduct, oldProduct.getProductId());
     }
+
 
     @Override
     public boolean delete(ProductDto dto) {
@@ -43,7 +50,9 @@ public class ProductBo implements SuperBo<ProductDto>{
         for(Product p : list){
             dtoList.add(new ProductDto(p.getProductId(),
                     p.getProductName(),
-                    p.getUnitPrice(),
+                    p.getSellingUnitPrice(),
+                    p.getBuyingUnitPrice(),
+                    p.getSupplier(),
                     p.getUnitType(),
                     p.getRemarks()));
         }

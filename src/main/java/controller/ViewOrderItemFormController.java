@@ -26,33 +26,40 @@ public class ViewOrderItemFormController implements Initializable {
     public TableColumn colAmount;
 
     public Button deleteOrderBtn;
+    public TableColumn colSupplier;
     private ProductBo productBo = new ProductBo();
 
     private OrderBo orderBo = new OrderBo();
     private String orderId;
     public void deleteOrderBtnOnacntion(ActionEvent actionEvent) {
         orderBo.delete(orderBo.getOrder(orderId));
-        tblOrderItem.refresh();
+        loadItemTable(null);
     }
 
     public void loadItemTable(OrderTm orderTm){
-        List<OrderItemDetailDto> orderItemDetailDtoList = orderTm.getOrderItemDetails();
-        ObservableList<OrderItemTm> itemTm = FXCollections.observableArrayList();
+        if(orderTm!=null){
+            List<OrderItemDetailDto> orderItemDetailDtoList = orderTm.getOrderItemDetails();
+            ObservableList<OrderItemTm> itemTm = FXCollections.observableArrayList();
 
-        orderId = orderTm.getOrderId();
+            orderId = orderTm.getOrderId();
 
-        for(OrderItemDetailDto item: orderItemDetailDtoList){
-            OrderItemTm orderItemTm = new OrderItemTm(
-                    item.getOrderId(),
-                    productBo.getProduct(item.getProductId()).getProductName(),
-                    item.getProductId(),
-                    item.getAmount(),
-                    item.getQty()
-            );
+            for(OrderItemDetailDto item: orderItemDetailDtoList){
+                OrderItemTm orderItemTm = new OrderItemTm(
+                        item.getOrderId(),
+                        productBo.getProduct(item.getProductId()).getProductName(),
+                        item.getProductId(),
+                        item.getAmount(),
+                        item.getQty(),
+                        item.getSupplierName()
+                );
 
-            itemTm.add(orderItemTm);
+                itemTm.add(orderItemTm);
+            }
+            tblOrderItem.setItems(itemTm);
+        }else{
+            tblOrderItem.setItems(null);
         }
-        tblOrderItem.setItems(itemTm);
+
     }
 
     @Override
@@ -61,6 +68,7 @@ public class ViewOrderItemFormController implements Initializable {
         colProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
         colAmount.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
 
 
     }

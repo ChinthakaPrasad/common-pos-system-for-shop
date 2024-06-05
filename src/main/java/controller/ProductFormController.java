@@ -1,8 +1,9 @@
 package controller;
 
 import BO.ProductBo;
-import dto.CustomerDto;
+import BO.SupplierBo;
 import dto.ProductDto;
+import dto.SupplierDto;
 import dto.tm.CustomerTm;
 import dto.tm.ProductTm;
 import javafx.collections.FXCollections;
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ProductFormController implements Initializable {
@@ -28,6 +30,8 @@ public class ProductFormController implements Initializable {
     public Button updateProductBtn;
     public TableView tblProduct;
     public Button clearFieldBtn;
+    public TextField unitBuyingPrice;
+    public ComboBox cmbSupplier;
     @FXML
     private TextField productName;
 
@@ -35,7 +39,7 @@ public class ProductFormController implements Initializable {
     private TextField productRemarks;
 
     @FXML
-    private TextField unitPrice;
+    private TextField unitSellingPrice;
 
     @FXML
     private TextField unitType;
@@ -74,18 +78,31 @@ public class ProductFormController implements Initializable {
 
 
     public void addProductBtnOnaction(javafx.event.ActionEvent actionEvent) {
-        ProductDto dto = new ProductDto(0,
-                productName.getText(),
-                Double.parseDouble(unitPrice.getText()),
-                unitType.getText(),
-                productRemarks.getText());
-
-        if(productBo.save(dto)){
-            new Alert(Alert.AlertType.INFORMATION,"Product Added!").show();
-            loadProductTable();
-        }else{
-            new Alert(Alert.AlertType.ERROR,"Product Added Unsuccessful").show();
+        boolean isExist = false;
+        for(ProductTm p : tmList){
+            if(p.getProductName().equalsIgnoreCase(productName.getText().toLowerCase())){
+                isExist = true;
+            }
         }
+        if(!isExist && !productName.getText().isEmpty()){
+            ProductDto dto = new ProductDto(0,
+                    productName.getText(),
+                    Double.parseDouble(unitSellingPrice.getText()),
+                    Double.parseDouble(unitBuyingPrice.getText()),
+                    cmbSupplier.getValue().toString(),
+                    unitType.getText(),
+                    productRemarks.getText());
+
+            if(productBo.save(dto)){
+                new Alert(Alert.AlertType.INFORMATION,"Product Added!").show();
+                loadProductTable();
+            }else{
+                new Alert(Alert.AlertType.ERROR,"Product Added Unsuccessful").show();
+            }
+        }else{
+            new Alert(Alert.AlertType.ERROR,"Product Name already Exist").show();
+        }
+
     }
 
     public void searchProductFieldOnaction(javafx.event.ActionEvent actionEvent) {
@@ -113,8 +130,10 @@ public class ProductFormController implements Initializable {
     public void updateProductBtnOnaction(javafx.event.ActionEvent actionEvent) {
         ProductDto dto = new ProductDto(0,
                 productName.getText(),
-                Double.parseDouble(unitPrice.getText()),
-                unitPrice.getText(),
+                Double.parseDouble(unitSellingPrice.getText()),
+                Double.parseDouble(unitBuyingPrice.getText()),
+                cmbSupplier.getValue().toString(),
+                unitType.getText(),
                 productRemarks.getText());
 
         if(productBo.update(dto)){
@@ -135,14 +154,23 @@ public class ProductFormController implements Initializable {
             ProductTm c = new ProductTm(
                     dto.getProductId(),
                     dto.getProductName(),
-                    dto.getUnitPrice(),
+                    dto.getSellingUnitPrice(),
+                    dto.getBuyingUnitPrice(),
+                    dto.getSupplier(),
                     dto.getUnitType(),
                     dto.getRemarks(),
                     btn
             );
 
             btn.setOnAction(actionEvent -> {
-                deleteCustomer(dto);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Delete Confirmation");
+                alert.setContentText("Do you want to delete? Which may affect delete all orders related to the Product too!");
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.isPresent() && result.get() == ButtonType.OK) {
+                    deleteProdcut(dto);
+                }
+
             });
 
             tmList.add(c);
@@ -150,7 +178,7 @@ public class ProductFormController implements Initializable {
         tblProduct.setItems(tmList);
     }
 
-    private void deleteCustomer(ProductDto dto) {
+    private void deleteProdcut(ProductDto dto) {
 
         boolean isDeleted = productBo.delete(dto);
         if (isDeleted){
@@ -165,22 +193,25 @@ public class ProductFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tblProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));
-        tblUnitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        tblUnitPrice.setCellValueFactory(new PropertyValueFactory<>("sellingUnitPrice"));
         tblUnitType.setCellValueFactory(new PropertyValueFactory<>("unitType"));
         tblRemarks.setCellValueFactory(new PropertyValueFactory<>("remarks"));
         tblAction.setCellValueFactory(new PropertyValueFactory<>("btn"));
         loadProductTable();
+        loadSupplier();
 
         tblProduct.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
-            setData((CustomerTm) newValue);
+            setData((ProductTm) newValue);
         });
     }
 
-    private void setData(CustomerTm newValue) {
+    private void setData(ProductTm newValue) {
         if (newValue != null) {
-            productName.setText(newValue.getCustomerName());
-            unitPrice.setText(newValue.getPhoneNumber());
-            unitType.setText(newValue.getNic());
+            productName.setText(newValue.getProductName());
+            unitBuyingPrice.setText(String.valueOf(newValue.getBuyingUnitPrice()));
+            unitSellingPrice.setText(String.valueOf(newValue.getSellingUnitPrice()));
+            cmbSupplier.setValue(newValue.getSupplier());
+            unitType.setText(newValue.getUnitType());
             productRemarks.setText(newValue.getRemarks());
         }
     }
@@ -192,7 +223,7 @@ public class ProductFormController implements Initializable {
     private void clearFields() {
         tblProduct.refresh();
         productName.clear();
-        unitPrice.clear();
+        unitSellingPrice.clear();
         unitType.clear();
         productRemarks.clear();
     }
@@ -204,5 +235,17 @@ public class ProductFormController implements Initializable {
     public void refreshBtnOnaction(ActionEvent actionEvent) {
         loadProductTable();
         searchProductField.clear();
+    }
+
+    private SupplierBo supplierBo = new SupplierBo();
+    public void loadSupplier(){
+        ObservableList list = FXCollections.observableArrayList();
+        List<SupplierDto> supplierDtoList = supplierBo.all();
+
+        for(SupplierDto supplierDto: supplierDtoList){
+            list.add(supplierDto.getSupplierName());
+        }
+
+        cmbSupplier.setItems(list);
     }
 }

@@ -1,13 +1,23 @@
 
 Q
-java:S3740."/Provide the parametrized type for this generic.(£¸Õ‰ûÿÿÿÿ8›ô”×ü1
+java:S3740/"/Provide the parametrized type for this generic.(£¸Õ‰ûÿÿÿÿ8›ô”×ü1
+Q
+java:S37407"/Provide the parametrized type for this generic.(¬œ‘âşÿÿÿÿ8î’Îş1
+€
+java:S1488:"^Immediately return this expression instead of assigning it to the temporary variable "result".(˜ÇÏ•şÿÿÿÿ8ï’Îş1
+g
+java:S20955"EUse try-with-resources or close this "Session" in a "finally" clause.(íÊ‹ƒúÿÿÿÿ8«çƒÎş1
 N
-java:S1874",Remove this use of "save"; it is deprecated.(¥ªÙ¡úÿÿÿÿ8¯ô”×ü1
+java:S1874",Remove this use of "save"; it is deprecated.(¥ªÙ¡úÿÿÿÿ8¯ô”×ü1
 N
-java:S1874",Remove this use of "save"; it is deprecated.(øì•Åûÿÿÿÿ8í³š×ü1
+java:S1874",Remove this use of "save"; it is deprecated.(øì•Åûÿÿÿÿ8í³š×ü1
 P
-java:S1874&".Remove this use of "delete"; it is deprecated.(¡¶…”ûÿÿÿÿ8²ô”×ü1
+java:S1874'".Remove this use of "delete"; it is deprecated.(¡¶…”ûÿÿÿÿ8²ô”×ü1
 U
-java:S1874."3Remove this use of "createQuery"; it is deprecated.(£¸Õ‰ûÿÿÿÿ8³ô”×ü1
+java:S1874/"3Remove this use of "createQuery"; it is deprecated.(£¸Õ‰ûÿÿÿÿ8³ô”×ü1
+U
+java:S18747"3Remove this use of "createQuery"; it is deprecated.(¬œ‘âşÿÿÿÿ8†“Îş1
 I
-java:S1128",Remove this unused import 'entity.Customer'.(éş²¢8ÜÓ×ü1
+java:S1128",Remove this unused import 'entity.Customer'.(éş²¢8Áˆ„Îş1
+H
+java:S1128"+Remove this unused import 'entity.Product'.(Àìı8Áˆ„Îş1

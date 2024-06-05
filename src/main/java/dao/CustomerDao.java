@@ -18,10 +18,11 @@ public class CustomerDao {
         return true;
 
     }
-    public boolean updateCustomer(Customer c){
+    public boolean updateCustomer(Customer c, int id){
+
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        Customer customer = session.find(Customer.class, c.getCustomerId());
+        Customer customer = session.find(Customer.class, id);
         customer.setCustomerName(c.getCustomerName());
         customer.setNic(c.getNic());
         customer.setPhoneNumber(c.getPhoneNumber());

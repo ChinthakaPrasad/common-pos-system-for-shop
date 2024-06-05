@@ -3,6 +3,8 @@ package dto.tm;
 import javafx.scene.control.Button;
 import lombok.*;
 
+import java.util.PrimitiveIterator;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
@@ -16,4 +18,5 @@ public class OrderProductTm {
     private double amount;
     private String remarks;
     private Button btn;
+    private String supplier;
 }

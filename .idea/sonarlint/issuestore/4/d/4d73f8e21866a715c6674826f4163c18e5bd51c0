@@ -1,21 +1,21 @@
 
 Q
-java:S3740-"/Provide the parametrized type for this generic.(÷îÿÿÿÿÿ8—”¥ûı1
+java:S3740."/Provide the parametrized type for this generic.(÷îÿÿÿÿÿ8—”¥ûı1
 Q
-java:S37406"/Provide the parametrized type for this generic.(¬œ‘âşÿÿÿÿ8—”¥ûı1
+java:S37407"/Provide the parametrized type for this generic.(¬œ‘âşÿÿÿÿ8—”¥ûı1
 {
-java:S14889"^Immediately return this expression instead of assigning it to the temporary variable "result".(ÜÇÿò8˜”¥ûı1
+java:S1488:"^Immediately return this expression instead of assigning it to the temporary variable "result".(ÜÇÿò8˜”¥ûı1
 g
-java:S20954"EUse try-with-resources or close this "Session" in a "finally" clause.(íÊ‹ƒúÿÿÿÿ8®”¥ûı1
+java:S20955"EUse try-with-resources or close this "Session" in a "finally" clause.(íÊ‹ƒúÿÿÿÿ8®”¥ûı1
 N
 java:S1874",Remove this use of "save"; it is deprecated.(’à¸øÿÿÿÿ8°”¥ûı1
 N
-java:S1874",Remove this use of "save"; it is deprecated.(î¶ÿàûÿÿÿÿ8²”¥ûı1
+java:S1874",Remove this use of "save"; it is deprecated.(î¶ÿàûÿÿÿÿ8²”¥ûı1
 K
-java:S1874%".Remove this use of "delete"; it is deprecated.(Ê¸´·8³”¥ûı1
+java:S1874&".Remove this use of "delete"; it is deprecated.(Ê¸´·8³”¥ûı1
 U
-java:S1874-"3Remove this use of "createQuery"; it is deprecated.(÷îÿÿÿÿÿ8µ”¥ûı1
+java:S1874."3Remove this use of "createQuery"; it is deprecated.(÷îÿÿÿÿÿ8µ”¥ûı1
 U
-java:S18746"3Remove this use of "createQuery"; it is deprecated.(¬œ‘âşÿÿÿÿ8¶”¥ûı1
+java:S18747"3Remove this use of "createQuery"; it is deprecated.(¬œ‘âşÿÿÿÿ8¶”¥ûı1
 [
 java:S1128"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬şÿÿÿÿ8·”¥ûı1

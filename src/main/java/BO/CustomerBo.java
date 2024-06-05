@@ -24,12 +24,13 @@ public class CustomerBo implements SuperBo<CustomerDto>{
 
     @Override
     public boolean update(CustomerDto dto) {
-        Customer c = new Customer(dto.getCustomerName(),
+        Customer oldCustomer = customerDao.getCustomer(dto.getCustomerName());
+        Customer updateCustomer = new Customer(dto.getCustomerName(),
                 dto.getPhoneNumber(),
                 dto.getNic(),
                 dto.getRemarks(),
-                null);
-        return customerDao.updateCustomer(c);
+                oldCustomer.getOrders());
+        return customerDao.updateCustomer(updateCustomer, oldCustomer.getCustomerId());
     }
 
     @Override

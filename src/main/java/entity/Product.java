@@ -21,13 +21,17 @@ public class Product {
     private int productId;
 
     private String productName;
-    private double unitPrice;
+    private double sellingUnitPrice;
+    private double buyingUnitPrice;
+    private String supplier;
     private String unitType;
     private String remarks;
 
-    public Product(String productName, double unitPrice, String unitType, String remarks) {
+    public Product(String productName, double sellingUnitPrice, double buyingUnitPrice, String supplier, String unitType, String remarks) {
         this.productName = productName;
-        this.unitPrice = unitPrice;
+        this.sellingUnitPrice = sellingUnitPrice;
+        this.buyingUnitPrice = buyingUnitPrice;
+        this.supplier = supplier;
         this.unitType = unitType;
         this.remarks = remarks;
     }

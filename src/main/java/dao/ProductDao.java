@@ -18,12 +18,14 @@ public class ProductDao {
         return true;
 
     }
-    public boolean updateProduct(Product p){
+    public boolean updateProduct(Product p, int id){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        Product product = session.find(Product.class, p.getProductId());
+        Product product = session.find(Product.class, id);
         product.setProductName(p.getProductName());
-        product.setUnitPrice(p.getUnitPrice());
+        product.setSellingUnitPrice(p.getSellingUnitPrice());
+        product.setBuyingUnitPrice(p.getBuyingUnitPrice());
+        product.setSupplier(p.getSupplier());
         product.setUnitType(p.getUnitType());
         product.setRemarks(p.getRemarks());
         session.save(product);
@@ -54,5 +56,15 @@ public class ProductDao {
         session.close();
         return product;
 
+    }
+
+    public Product getProduct(String name){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        String hql = "FROM Product WHERE productName = :value";
+        Query query = session.createQuery(hql);
+        query.setParameter("value", name);
+
+        Product result = (Product) query.uniqueResult();
+        return result;
     }
 }

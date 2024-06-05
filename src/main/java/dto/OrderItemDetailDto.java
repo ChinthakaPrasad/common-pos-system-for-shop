@@ -12,4 +12,5 @@ public class OrderItemDetailDto {
     private int productId;
     private double amount;
     private double qty;
+    private String supplierName;
 }

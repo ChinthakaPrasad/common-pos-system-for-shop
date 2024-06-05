@@ -1,6 +1,8 @@
 package controller;
 
+import BO.CustomerBo;
 import BO.OrderBo;
+import dto.CustomerDto;
 import dto.OrderDto;
 import dto.tm.CustomerTm;
 import dto.tm.OrderTm;
@@ -11,9 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -30,6 +30,9 @@ public class ReportFormController implements Initializable {
     public TableColumn colBroughtDate;
     public TableColumn colAction;
     public TableView tblOrders;
+    public ComboBox cmbCustomerName;
+    public Button refreshBtn;
+    public DatePicker datePicker;
 
     private OrderBo orderBo = new OrderBo();
 
@@ -42,9 +45,10 @@ public class ReportFormController implements Initializable {
         stage.show();
     }
 
+    private ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
     public void loadOrderTable(){
         List<OrderDto> orderDtoList = orderBo.all();
-        ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
+        tmList = FXCollections.observableArrayList();
         Button btn = new Button("View");
 
         for(OrderDto orderDto : orderDtoList){
@@ -90,5 +94,50 @@ public class ReportFormController implements Initializable {
         colBroughtDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colAction.setCellValueFactory(new PropertyValueFactory<>("view"));
         loadOrderTable();
+        loadCustomers();
+    }
+
+    private CustomerBo customerBo = new CustomerBo();
+    private void loadCustomers(){
+        ObservableList list = FXCollections.observableArrayList();
+
+        List<CustomerDto> customerDtoList = customerBo.all();
+        for(CustomerDto customerDto: customerDtoList){
+            list.add(customerDto.getCustomerName());
+        }
+        
+        cmbCustomerName.setItems(list);
+
+    }
+
+    public void cmbCustomerNameOnaction(ActionEvent actionEvent) {
+        if(cmbCustomerName.getValue()!=null){
+            String selectCustomer = cmbCustomerName.getValue().toString();
+            ObservableList<OrderTm> list = FXCollections.observableArrayList();
+            for (OrderTm orderTm:tmList){
+                if(orderTm.getCustomerName().equalsIgnoreCase(selectCustomer.toLowerCase())){
+                    list.add(orderTm);
+                }
+            }
+            tblOrders.setItems(list);
+        }
+
+    }
+
+    public void refreshBtnOnaction(ActionEvent actionEvent) {
+        loadOrderTable();
+        cmbCustomerName.setValue(null);
+
+    }
+
+    public void datePickerOnaction(ActionEvent actionEvent) {
+        ObservableList<OrderTm> list = FXCollections.observableArrayList();
+        String date = datePicker.getValue().toString();
+        for(OrderTm orderTm:list){
+            if(date.equalsIgnoreCase(orderTm.getDate().toLowerCase())){
+                list.add(orderTm);
+            }
+        }
+        tblOrders.setItems(list);
     }
 }

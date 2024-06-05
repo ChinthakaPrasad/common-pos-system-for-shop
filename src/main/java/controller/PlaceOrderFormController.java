@@ -108,7 +108,8 @@ public class PlaceOrderFormController implements Initializable {
                 orderBo.getOrderId(),
                 tm.getProductId(),
                 tm.getAmount(),
-                tm.getQty()
+                tm.getQty(),
+                tm.getSupplier()
             );
 
             orderItemDetailDtoList.add(dto);
@@ -124,6 +125,7 @@ public class PlaceOrderFormController implements Initializable {
 
         if(orderBo.save(orderDto)){
             new Alert(Alert.AlertType.INFORMATION,"Order Completed!").show();
+            tblProduct.getItems().clear();
         }else{
             new Alert(Alert.AlertType.ERROR,"Order Unsuccessful").show();
         }
@@ -175,7 +177,8 @@ public class PlaceOrderFormController implements Initializable {
                 discount,
                 Double.parseDouble(productQty.getText())*Double.parseDouble(unitPrice.getText())-discount,
                 productRemark.getText(),
-                btn
+                btn,
+                newDto.getSupplier()
         );
 
         btn.setOnAction(actionEvent1 -> {
@@ -228,7 +231,7 @@ public class PlaceOrderFormController implements Initializable {
             for (ProductDto dto:products) {
                 if (String.valueOf(dto.getProductName()).equals(newValue.toString())){
                     unitType.setText(dto.getUnitType());
-                    unitPrice.setText(String.valueOf(dto.getUnitPrice()));
+                    unitPrice.setText(String.valueOf(dto.getSellingUnitPrice()));
                 }
             }
         });

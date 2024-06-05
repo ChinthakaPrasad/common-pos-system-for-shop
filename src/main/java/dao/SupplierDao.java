@@ -1,6 +1,7 @@
 package dao;
 
 import entity.Customer;
+import entity.Product;
 import entity.Supplier;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -18,10 +19,10 @@ public class SupplierDao {
         return true;
 
     }
-    public boolean updateSupplier(Supplier s){
+    public boolean updateSupplier(Supplier s, int id){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        Supplier supplier = session.find(Supplier.class, s.getSupplierId());
+        Supplier supplier = session.find(Supplier.class, id);
         supplier.setSupplierName(s.getSupplierName());
         supplier.setPhoneNumber(s.getPhoneNumber());
         supplier.setAddress(s.getAddress());
@@ -47,5 +48,14 @@ public class SupplierDao {
         List<Supplier> list = query.list();
         session.close();
         return list;
+    }
+    public Supplier getSupplier(String name){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        String hql = "FROM Supplier WHERE supplierName = :value";
+        Query query = session.createQuery(hql);
+        query.setParameter("value", name);
+
+        Supplier result = (Supplier) query.uniqueResult();
+        return result;
     }
 }

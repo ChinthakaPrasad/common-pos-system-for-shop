@@ -11,7 +11,9 @@ import lombok.*;
 public class ProductTm {
     private int productId;
     private String productName;
-    private double unitPrice;
+    private double sellingUnitPrice;
+    private double buyingUnitPrice;
+    private String supplier;
     private String unitType;
     private String remarks;
     private Button btn;

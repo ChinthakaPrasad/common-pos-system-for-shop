@@ -10,7 +10,9 @@ import lombok.*;
 public class ProductDto {
     private int productId;
     private String productName;
-    private double unitPrice;
+    private double sellingUnitPrice;
+    private double buyingUnitPrice;
+    private String supplier;
     private String unitType;
     private String remarks;
 }
