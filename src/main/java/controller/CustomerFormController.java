@@ -57,6 +57,15 @@ public class CustomerFormController implements Initializable {
     }
 
     public void searchCustomerOnaction(ActionEvent actionEvent) {
+        String searchName = searchCustomerField.getText();
+        ObservableList<CustomerTm> filterTmList = FXCollections.observableArrayList();
+        for(CustomerTm customerTm: tmList){
+            if(customerTm.getCustomerName().equalsIgnoreCase(searchName.toLowerCase())){
+                filterTmList.add(customerTm);
+            }
+        }
+        tblCustomer.setItems(filterTmList);
+
     }
 
     public void goBackBtnOnaction(ActionEvent actionEvent) throws IOException {
@@ -68,13 +77,12 @@ public class CustomerFormController implements Initializable {
         stage.show();
     }
 
-    public void clearAllBtnOnaction(ActionEvent actionEvent) {
-    }
 
     public void refreshBtnBtnOnaction(ActionEvent actionEvent) {
         loadCustomerTable();
         tblCustomer.refresh();
         clearFields();
+        searchCustomerField.clear();
 
     }
     private void clearFields() {
@@ -116,8 +124,9 @@ public class CustomerFormController implements Initializable {
         }
     }
 
+    private ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
     private void loadCustomerTable() {
-        ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
+        tmList = FXCollections.observableArrayList();
 
         List<CustomerDto> dtoList  = customerBo.all();
         for (CustomerDto dto:dtoList) {

@@ -22,7 +22,6 @@
       <Button id="dark-blue" fx:id="addProductBtn" layoutX="962.0" layoutY="114.0" mnemonicParsing="false" onAction="#addProductBtnOnaction" prefHeight="41.0" prefWidth="177.0" stylesheets="@styles/javafx.css" text="Add Product" />
       <TextField fx:id="searchProductField" layoutX="41.0" layoutY="196.0" onAction="#searchProductFieldOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Product" />
       <Button id="dark-blue" fx:id="goBackBtn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="132.0" styleClass="#dark-blue" stylesheets="@styles/javafx.css" text="Go Back" />
-      <Button id="dark-blue" fx:id="clearAllBtn" layoutX="41.0" layoutY="643.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Clear All" />
       <TableView fx:id="tblProduct" layoutX="41.0" layoutY="263.0" prefHeight="349.0" prefWidth="1092.0">
         <columns>
           <TableColumn fx:id="tblProductName" prefWidth="246.0" text="Product Name" />
@@ -32,7 +31,7 @@
             <TableColumn fx:id="tblAction" prefWidth="144.0" text="Actions" />
         </columns>
       </TableView>
-      <Button id="dark-blue" fx:id="refreshBtn" layoutX="911.0" layoutY="643.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Refresh" />
+      <Button id="dark-blue" fx:id="refreshBtn" layoutX="911.0" layoutY="643.0" mnemonicParsing="false" onAction="#refreshBtnOnaction" prefHeight="41.0" prefWidth="222.0" stylesheets="@styles/javafx.css" text="Refresh" />
       <Button id="dark-blue" fx:id="updateProductBtn" layoutX="337.0" layoutY="191.0" mnemonicParsing="false" onAction="#updateProductBtnOnaction" prefHeight="41.0" prefWidth="214.0" stylesheets="@styles/javafx.css" text="Update Product" />
       <Button id="dark-blue" fx:id="clearFieldBtn" layoutX="577.0" layoutY="191.0" mnemonicParsing="false" onAction="#clearFieldBtnOnaction" prefHeight="41.0" prefWidth="149.0" stylesheets="@styles/javafx.css" text="Clear Fields" />
    </children>

@@ -20,7 +20,7 @@
       <TextField fx:id="custPhoneNumber" layoutX="252.0" layoutY="99.0" promptText="Phone Number" />
       <TextField fx:id="custIdentity" layoutX="462.0" layoutY="99.0" promptText="NIC" />
       <Button id="dark-blue" fx:id="addCustomerBtn" layoutX="914.0" layoutY="94.0" mnemonicParsing="false" onAction="#addCustomerBtnOnaction" prefHeight="41.0" prefWidth="167.0" stylesheets="@styles/javafx.css" text="Add Customer" />
-      <TextField fx:id="searchCustomerField" layoutX="21.0" layoutY="176.0" onAction="#searchCustomerOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Customer" />
+      <TextField fx:id="searchCustomerField" layoutX="21.0" layoutY="176.0" onAction="#searchCustomerOnaction" prefHeight="31.0" prefWidth="251.0" promptText="Search Customer by Name" />
       <TableView fx:id="tblCustomer" layoutX="21.0" layoutY="234.0" prefHeight="370.0" prefWidth="1052.0">
         <columns>
           <TableColumn fx:id="colCustame" prefWidth="211.0" text="Customer Name" />

@@ -4,6 +4,7 @@ import BO.SupplierBo;
 import dto.CustomerDto;
 import dto.SupplierDto;
 import dto.tm.CustomerTm;
+import dto.tm.ProductTm;
 import dto.tm.SupplierTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -94,6 +95,14 @@ public class SupplierFormController implements Initializable {
     }
 
     public void searchSupplierOnaction(javafx.event.ActionEvent actionEvent) {
+        String searchName = searchSupplier.getText();
+        ObservableList<SupplierTm> filterTmList = FXCollections.observableArrayList();
+        for(SupplierTm supplierTm: tmList){
+            if(supplierTm.getSupplierName().equalsIgnoreCase(searchName.toLowerCase())){
+                filterTmList.add(supplierTm);
+            }
+        }
+        tblSupplier.setItems(filterTmList);
     }
 
     public void goBackBtnOnaction(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -105,12 +114,11 @@ public class SupplierFormController implements Initializable {
         stage.show();
     }
 
-    public void clearAllBtnOnaction(javafx.event.ActionEvent actionEvent) {
-    }
 
     public void refreshBtnOnaction(javafx.event.ActionEvent actionEvent) {
         loadSupplierTable();
         clearFields();
+        searchSupplier.clear();
     }
 
     public void updateSupplierBtnOnaction(javafx.event.ActionEvent actionEvent) {
@@ -128,8 +136,9 @@ public class SupplierFormController implements Initializable {
             new Alert(Alert.AlertType.ERROR,"Supplier Updated Unsuccessful").show();
         }
     }
+    private ObservableList<SupplierTm> tmList = FXCollections.observableArrayList();
     private void loadSupplierTable() {
-        ObservableList<SupplierTm> tmList = FXCollections.observableArrayList();
+        tmList = FXCollections.observableArrayList();
 
         List<SupplierDto> dtoList  = supplierBo.all();
         for (SupplierDto dto:dtoList) {
@@ -201,6 +210,6 @@ public class SupplierFormController implements Initializable {
 
 
     public void onMouseClickAction(MouseEvent mouseEvent) {
-        clearFields();
+
     }
 }

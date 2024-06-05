@@ -82,13 +82,21 @@ public class ProductFormController implements Initializable {
 
         if(productBo.save(dto)){
             new Alert(Alert.AlertType.INFORMATION,"Product Added!").show();
-            loadCustomerTable();
+            loadProductTable();
         }else{
             new Alert(Alert.AlertType.ERROR,"Product Added Unsuccessful").show();
         }
     }
 
     public void searchProductFieldOnaction(javafx.event.ActionEvent actionEvent) {
+        String searchName = searchProductField.getText();
+        ObservableList<ProductTm> filterTmList = FXCollections.observableArrayList();
+        for(ProductTm productTm: tmList){
+            if(productTm.getProductName().equalsIgnoreCase(searchName.toLowerCase())){
+                filterTmList.add(productTm);
+            }
+        }
+        tblProduct.setItems(filterTmList);
     }
 
     public void goBackBtnOnaction(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -100,8 +108,7 @@ public class ProductFormController implements Initializable {
         stage.show();
     }
 
-    public void clearAllBtnOnaction(javafx.event.ActionEvent actionEvent) {
-    }
+
 
     public void updateProductBtnOnaction(javafx.event.ActionEvent actionEvent) {
         ProductDto dto = new ProductDto(0,
@@ -112,14 +119,15 @@ public class ProductFormController implements Initializable {
 
         if(productBo.update(dto)){
             new Alert(Alert.AlertType.INFORMATION,"Product Updated!").show();
-            loadCustomerTable();
+            loadProductTable();
         }else{
             new Alert(Alert.AlertType.ERROR,"Product Updated Unsuccessful").show();
         }
     }
 
-    private void loadCustomerTable() {
-        ObservableList<ProductTm> tmList = FXCollections.observableArrayList();
+    private ObservableList<ProductTm> tmList = FXCollections.observableArrayList();
+    private void loadProductTable() {
+        tmList = FXCollections.observableArrayList();
 
         List<ProductDto> dtoList  = productBo.all();
         for (ProductDto dto:dtoList) {
@@ -147,7 +155,7 @@ public class ProductFormController implements Initializable {
         boolean isDeleted = productBo.delete(dto);
         if (isDeleted){
             new Alert(Alert.AlertType.INFORMATION,"Customer Deleted!").show();
-            loadCustomerTable();
+            loadProductTable();
         }else{
             new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
         }
@@ -161,7 +169,7 @@ public class ProductFormController implements Initializable {
         tblUnitType.setCellValueFactory(new PropertyValueFactory<>("unitType"));
         tblRemarks.setCellValueFactory(new PropertyValueFactory<>("remarks"));
         tblAction.setCellValueFactory(new PropertyValueFactory<>("btn"));
-        loadCustomerTable();
+        loadProductTable();
 
         tblProduct.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             setData((CustomerTm) newValue);
@@ -191,5 +199,10 @@ public class ProductFormController implements Initializable {
 
     public void clearFieldBtnOnaction(ActionEvent actionEvent) {
         clearFields();
+    }
+
+    public void refreshBtnOnaction(ActionEvent actionEvent) {
+        loadProductTable();
+        searchProductField.clear();
     }
 }

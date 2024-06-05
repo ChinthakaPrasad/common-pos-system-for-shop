@@ -32,7 +32,6 @@
          </columns>
       </TableView>
       <Button id="dark-blue" fx:id="goBackBtn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#goBackBtnOnaction" prefHeight="41.0" prefWidth="127.0" stylesheets="@styles/javafx.css" text="Go Back" />
-      <Button id="dark-blue" fx:id="clearAllBtn" layoutX="31.0" layoutY="625.0" mnemonicParsing="false" onAction="#clearAllBtnOnaction" prefHeight="40.0" prefWidth="127.0" stylesheets="@styles/javafx.css" text="Clear All" />
       <TextField fx:id="supplierEmail" layoutX="685.0" layoutY="109.0" promptText="Email" />
       <Button id="dark-blue" fx:id="refreshBtn" layoutX="897.0" layoutY="625.0" mnemonicParsing="false" onAction="#refreshBtnOnaction" prefHeight="41.0" prefWidth="197.0" stylesheets="@styles/javafx.css" text="Refresh" />
       <Button id="dark-blue" fx:id="updateSupplierBtn" layoutX="300.0" layoutY="184.0" mnemonicParsing="false" onAction="#updateSupplierBtnOnaction" prefHeight="41.0" prefWidth="187.0" stylesheets="@styles/javafx.css" text="Update Supplier" />
