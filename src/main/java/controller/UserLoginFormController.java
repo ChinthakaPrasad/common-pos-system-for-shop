@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -17,12 +18,15 @@ public class UserLoginFormController {
     public TextField txtPassword;
     public Button loginBtn;
     public Button signupBtn;
+    public Label waitLabel;
 
     private UserBo userBo = new UserBo();
 
     public void loginBtnOnaction(ActionEvent actionEvent) throws IOException, NoSuchAlgorithmException {
+        waitLabel.setVisible(true);
         String userName = txtUsername.getText();
         String password = txtPassword.getText();
+
 
         if(userBo.checkUser(userName, password)){
             Stage stage = (Stage) signupBtn.getScene().getWindow();

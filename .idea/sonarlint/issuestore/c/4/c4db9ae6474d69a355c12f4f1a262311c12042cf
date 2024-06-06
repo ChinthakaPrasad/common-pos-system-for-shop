@@ -1,0 +1,37 @@
+
+Q
+java:S3740"/Provide the parametrized type for this generic.(¯‰¹óùÿÿÿÿ8Šßş1
+Q
+java:S3740"/Provide the parametrized type for this generic.(öÄÀàúÿÿÿÿ8Šßş1
+Q
+java:S3740"/Provide the parametrized type for this generic.(ÚÎÑ£ûÿÿÿÿ8ÔÖßş1
+{
+java:S1104"YMake tblStatistics a static final constant or non-public and provide accessors if needed.(¯‰¹óùÿÿÿÿ8Šßş1
+~
+java:S1104"\Make colStatisticName a static final constant or non-public and provide accessors if needed.(öÄÀàúÿÿÿÿ8Šßş1
+v
+java:S1104"TMake colValue a static final constant or non-public and provide accessors if needed.(ÚÎÑ£ûÿÿÿÿ8Šßş1
+x
+java:S1104"VMake datePicker a static final constant or non-public and provide accessors if needed.(ĞÔÆøÿÿÿÿ8Šßş1
+r
+java:S1104"UMake getPdfBtn a static final constant or non-public and provide accessors if needed.(¹øïº8ÖÖßş1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ä£ŠÈ8ÛÖßş1
+
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ªÖÓã8ÛÖßş1
+^
+java:S18547"<Remove this useless assignment to local variable "addForth".(Œ¸õúÿÿÿÿ8áÖßş1
+^
+java:S18546"<Remove this useless assignment to local variable "addThird".(–á¡¬ùÿÿÿÿ8Šßş1
+_
+java:S18545"=Remove this useless assignment to local variable "addSecond".(ŠùØìşÿÿÿÿ8Šßş1
+Y
+java:S18544"<Remove this useless assignment to local variable "addfirst".(Ÿ©ªœ8Šßş1
+J
+java:S14814"-Remove this unused "addfirst" local variable.(Ÿ©ªœ8¡Šßş1
+P
+java:S14815".Remove this unused "addSecond" local variable.(ŠùØìşÿÿÿÿ8¡Šßş1
+O
+java:S14816"-Remove this unused "addThird" local variable.(–á¡¬ùÿÿÿÿ8¢Šßş1
+O
+java:S14817"-Remove this unused "addForth" local variable.(Œ¸õúÿÿÿÿ8åÖßş1

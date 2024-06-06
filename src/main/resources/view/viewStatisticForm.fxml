@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="520.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewStatisticFormController">
+   <children>
+      <Label alignment="BASELINE_CENTER" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="751.0" style="-fx-background-color: #4d7995;" stylesheets="@styles/javafx.css" text="Abance group of Company" textAlignment="CENTER" textFill="#e6e4ff" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Bold" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblStatistics" layoutX="70.0" layoutY="131.0" prefHeight="296.0" prefWidth="612.0">
+        <columns>
+          <TableColumn fx:id="colStatisticName" prefWidth="329.0" text="Statistic" />
+          <TableColumn fx:id="colValue" prefWidth="282.0" text="Value" />
+        </columns>
+      </TableView>
+      <Button id="dark-blue" fx:id="getPdfBtn" layoutX="472.0" layoutY="454.0" mnemonicParsing="false" onAction="#getPdfBtnOnaction" prefHeight="41.0" prefWidth="210.0" stylesheets="@styles/javafx.css" text="Get PDF Report" />
+      <DatePicker fx:id="datePicker" layoutX="464.0" layoutY="87.0" onAction="#datePickerOnaction" />
+   </children>
+</AnchorPane>

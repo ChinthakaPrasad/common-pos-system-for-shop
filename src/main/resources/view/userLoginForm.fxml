@@ -19,5 +19,6 @@
       <Button fx:id="loginBtn" layoutX="232.0" layoutY="246.0" mnemonicParsing="false" onAction="#loginBtnOnaction" prefHeight="21.0" prefWidth="175.0" text="Log In" />
       <Button fx:id="signupBtn" layoutX="231.0" layoutY="413.0" mnemonicParsing="false" onAction="#signupBtnOnaction" prefHeight="21.0" prefWidth="175.0" text="Sign Up" />
       <PasswordField fx:id="txtPassword" layoutX="162.0" layoutY="198.0" prefHeight="31.0" prefWidth="316.0" promptText="Password" />
+      <Label fx:id="waitLabel" alignment="CENTER" layoutX="209.0" layoutY="89.0" prefHeight="21.0" prefWidth="219.0" text="Please wait ..." visible="false" />
    </children>
 </AnchorPane>

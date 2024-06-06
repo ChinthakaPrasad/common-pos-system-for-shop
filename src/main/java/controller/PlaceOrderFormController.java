@@ -126,10 +126,14 @@ public class PlaceOrderFormController implements Initializable {
         if(orderBo.save(orderDto)){
             new Alert(Alert.AlertType.INFORMATION,"Order Completed!").show();
             tblProduct.getItems().clear();
+
         }else{
             new Alert(Alert.AlertType.ERROR,"Order Unsuccessful").show();
         }
 }
+    public void clearFields(){
+
+    }
 
     public void clearAllBtnOnaction(javafx.event.ActionEvent actionEvent) {
     }
@@ -164,8 +168,13 @@ public class PlaceOrderFormController implements Initializable {
             }
         }
         double discount = 0;
-        if(Double.parseDouble(productDiscount.getText())>=0){
-            discount = Double.parseDouble(productDiscount.getText());
+        if(!productDiscount.getText().isEmpty()){
+            try {
+                discount = Double.parseDouble(productDiscount.getText());
+            }catch (Exception e){
+                new Alert(Alert.AlertType.ERROR,"Please give valid discount").show();
+            }
+
         }
 
 

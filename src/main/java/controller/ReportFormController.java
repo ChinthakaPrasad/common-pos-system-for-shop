@@ -33,6 +33,7 @@ public class ReportFormController implements Initializable {
     public ComboBox cmbCustomerName;
     public Button refreshBtn;
     public DatePicker datePicker;
+    public Button viewStatisticBtn;
 
     private OrderBo orderBo = new OrderBo();
 
@@ -45,13 +46,14 @@ public class ReportFormController implements Initializable {
         stage.show();
     }
 
-    private ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
+    private ObservableList<OrderTm> tmList;
     public void loadOrderTable(){
-        List<OrderDto> orderDtoList = orderBo.all();
         tmList = FXCollections.observableArrayList();
-        Button btn = new Button("View");
+        List<OrderDto> orderDtoList = orderBo.all();
+
 
         for(OrderDto orderDto : orderDtoList){
+            Button btn = new Button("View");
             OrderTm orderTm = new OrderTm(
                     orderDto.getOrderId(),
                     orderDto.getCustomerName(),
@@ -82,6 +84,10 @@ public class ReportFormController implements Initializable {
 
         }
         tblOrders.setItems(tmList);
+        for(OrderTm tm : tmList){
+            System.out.println(tm.getView());
+        }
+
 
     }
 
@@ -94,7 +100,7 @@ public class ReportFormController implements Initializable {
         colBroughtDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colAction.setCellValueFactory(new PropertyValueFactory<>("view"));
         loadOrderTable();
-        loadCustomers();
+        //loadCustomers();
     }
 
     private CustomerBo customerBo = new CustomerBo();
@@ -139,5 +145,21 @@ public class ReportFormController implements Initializable {
             }
         }
         tblOrders.setItems(list);
+    }
+
+    public void viewStatisticBtnOnaction(ActionEvent actionEvent) {
+        Stage newWindow = new Stage();
+        newWindow.setTitle("View Statistics");
+        newWindow.setResizable(false);
+        newWindow.centerOnScreen();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/viewStatisticForm.fxml"));
+            Parent root = loader.load();
+            newWindow.setScene(new Scene(root));
+            newWindow.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

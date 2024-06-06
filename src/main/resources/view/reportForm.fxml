@@ -29,5 +29,6 @@
       </TableView>
       <Button id="dark-blue" fx:id="refreshBtn" layoutX="825.0" layoutY="667.0" mnemonicParsing="false" onAction="#refreshBtnOnaction" prefHeight="41.0" prefWidth="214.0" stylesheets="@styles/javafx.css" text="Refresh" />
       <DatePicker fx:id="datePicker" layoutX="802.0" layoutY="99.0" onAction="#datePickerOnaction" prefHeight="31.0" prefWidth="237.0" />
+      <Button id="dark-blue" fx:id="viewStatisticBtn" layoutX="570.0" layoutY="667.0" mnemonicParsing="false" onAction="#viewStatisticBtnOnaction" prefHeight="41.0" prefWidth="214.0" stylesheets="@styles/javafx.css" text="View Statistics" />
    </children>
 </AnchorPane>

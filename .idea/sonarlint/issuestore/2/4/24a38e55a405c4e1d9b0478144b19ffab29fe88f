@@ -1,48 +1,57 @@
 
-g	java:S112N"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İ¬—Îş1
+g	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…„óàş1
+h	java:S112¢"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…ñøàş1
 K
-java:S3740"/Provide the parametrized type for this generic.(ôôD8İ¬—Îş1
+java:S3740"/Provide the parametrized type for this generic.(ôôD8…„óàş1
 Q
-java:S3740"/Provide the parametrized type for this generic.(Í‘ú¨ûÿÿÿÿ8İ¬—Îş1
+java:S3740"/Provide the parametrized type for this generic.(Í‘ú¨ûÿÿÿÿ8…„óàş1
 L
-java:S3740"/Provide the parametrized type for this generic.(Ü“âÂ8İ¬—Îş1
+java:S3740"/Provide the parametrized type for this generic.(Ü“âÂ8…„óàş1
 Q
-java:S3740"/Provide the parametrized type for this generic.(üÅ‚™ùÿÿÿÿ8İ¬—Îş1
+java:S3740"/Provide the parametrized type for this generic.(üÅ‚™ùÿÿÿÿ8…„óàş1
 K
-java:S3740"/Provide the parametrized type for this generic.(ï÷ãt8İ¬—Îş1
+java:S3740"/Provide the parametrized type for this generic.(ï÷ãt8…„óàş1
 Q
-java:S3740 "/Provide the parametrized type for this generic.(–¤³Òşÿÿÿÿ8İ¬—Îş1
+java:S3740 "/Provide the parametrized type for this generic.(–¤³Òşÿÿÿÿ8…„óàş1
 Q
-java:S3740!"/Provide the parametrized type for this generic.(»–ø‚ıÿÿÿÿ8İ¬—Îş1
+java:S3740!"/Provide the parametrized type for this generic.(»–ø‚ıÿÿÿÿ8†„óàş1
 L
-java:S3740f"/Provide the parametrized type for this generic.(Ÿœ•¨8İ¬—Îş1
+java:S3740l"/Provide the parametrized type for this generic.(Ÿœ•¨8†„óàş1
 r
-java:S1104"UMake goBackBtn a static final constant or non-public and provide accessors if needed.(¼Ë¥ß8Ş¬—Îş1
+java:S1104"UMake goBackBtn a static final constant or non-public and provide accessors if needed.(¼Ë¥ß8†„óàş1
 r
-java:S1104"VMake colOrderId a static final constant or non-public and provide accessors if needed.(ôôD8Ş¬—Îş1
+java:S1104"VMake colOrderId a static final constant or non-public and provide accessors if needed.(ôôD8†„óàş1
 }
-java:S1104"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Í‘ú¨ûÿÿÿÿ8Ş¬—Îş1
+java:S1104"[Make colCustomerName a static final constant or non-public and provide accessors if needed.(Í‘ú¨ûÿÿÿÿ8†„óàş1
 v
-java:S1104"YMake colTotalPrice a static final constant or non-public and provide accessors if needed.(Ü“âÂ8Ş¬—Îş1
+java:S1104"YMake colTotalPrice a static final constant or non-public and provide accessors if needed.(Ü“âÂ8†„óàş1
 |
-java:S1104"ZMake colBroughtDate a static final constant or non-public and provide accessors if needed.(üÅ‚™ùÿÿÿÿ8Ş¬—Îş1
+java:S1104"ZMake colBroughtDate a static final constant or non-public and provide accessors if needed.(üÅ‚™ùÿÿÿÿ8†„óàş1
 q
-java:S1104"UMake colAction a static final constant or non-public and provide accessors if needed.(ï÷ãt8Ş¬—Îş1
+java:S1104"UMake colAction a static final constant or non-public and provide accessors if needed.(ï÷ãt8†„óàş1
 w
-java:S1104 "UMake tblOrders a static final constant or non-public and provide accessors if needed.(–¤³Òşÿÿÿÿ8Ş¬—Îş1
+java:S1104 "UMake tblOrders a static final constant or non-public and provide accessors if needed.(–¤³Òşÿÿÿÿ8†„óàş1
 }
-java:S1104!"[Make cmbCustomerName a static final constant or non-public and provide accessors if needed.(»–ø‚ıÿÿÿÿ8Ş¬—Îş1
+java:S1104!"[Make cmbCustomerName a static final constant or non-public and provide accessors if needed.(»–ø‚ıÿÿÿÿ8‡„óàş1
 s
-java:S1104""VMake refreshBtn a static final constant or non-public and provide accessors if needed.(¥¹‰œ8Ş¬—Îş1
+java:S1104""VMake refreshBtn a static final constant or non-public and provide accessors if needed.(¥¹‰œ8‡„óàş1
 x
-java:S1104#"VMake datePicker a static final constant or non-public and provide accessors if needed.(ĞÔÆøÿÿÿÿ8ß¬—Îş1
+java:S1104#"VMake datePicker a static final constant or non-public and provide accessors if needed.(ĞÔÆøÿÿÿÿ8‡„óàş1
+~
+java:S1104$"\Make viewStatisticBtn a static final constant or non-public and provide accessors if needed.(û ”²şÿÿÿÿ8‡„óàş1
 T
-java:S1172'"2Remove this unused method parameter "actionEvent".(©ø«Áøÿÿÿÿ8ş¬—Îş1
+java:S1172("2Remove this unused method parameter "actionEvent".(©ø«Áøÿÿÿÿ8¨„óàş1
+L	java:S106X"+Replace this use of System.out by a logger.(¤ôò•ûÿÿÿÿ8ô±óàş1
+]	java:S125g"<This block of commented-out lines of code should be removed.(ğŞÔıÿÿÿÿ8¸„óàş1
 T
-java:S1172q"2Remove this unused method parameter "actionEvent".(›êÅşÿÿÿÿ8­—Îş1
-O
-java:S1172"2Remove this unused method parameter "actionEvent".(ìù”8­—Îş1
+java:S1172w"2Remove this unused method parameter "actionEvent".(›êÅşÿÿÿÿ8º„óàş1
 P
-java:S1172…"2Remove this unused method parameter "actionEvent".(ªÖÓã8­—Îş1
+java:S1172…"2Remove this unused method parameter "actionEvent".(ìù”8»„óàş1
 P
-java:S1128".Remove this unused import 'dto.tm.CustomerTm'.(Ä¶™ûÿÿÿÿ8­—Îş1
+java:S1172‹"2Remove this unused method parameter "actionEvent".(ªÖÓã8¼„óàş1
+U
+java:S1172–"2Remove this unused method parameter "actionEvent".(¿åÆÙùÿÿÿÿ8½„óàş1
+P
+java:S1128".Remove this unused import 'dto.tm.CustomerTm'.(Ä¶™ûÿÿÿÿ8Åñøàş1
+T
+java:S1144k"2Remove this unused private "loadCustomers" method.(Ğ¹æ¿şÿÿÿÿ8¾„óàş1

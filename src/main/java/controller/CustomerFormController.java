@@ -139,7 +139,7 @@ public class CustomerFormController implements Initializable {
         }
     }
 
-    private ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
+    private ObservableList<CustomerTm> tmList;
     private void loadCustomerTable() {
         tmList = FXCollections.observableArrayList();
 

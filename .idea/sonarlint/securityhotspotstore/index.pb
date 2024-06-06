@@ -91,3 +91,7 @@ i
 9src/main/java/controller/ViewOrderItemFormController.java,6\d\6d2aed27283aefe746b43f3f1e9e7b565e275e84
 U
 %src/main/java/dto/tm/OrderItemTm.java,2\7\278dfed0453a8ace8bddb53380733a4f3d956641
+i
+9src/main/java/controller/ViewStatisticFormController.java,c\4\c4db9ae6474d69a355c12f4f1a262311c12042cf
+U
+%src/main/java/dto/tm/StatisticTm.java,3\5\35ec1de251701997ae893df967417d11322cab16
